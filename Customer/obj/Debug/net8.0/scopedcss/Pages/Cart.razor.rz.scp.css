@@ -1,0 +1,69 @@
+.title[b-fqotee47fl]{
+    font-family: Roboto;
+    text-transform: uppercase;
+}
+
+.item-img[b-fqotee47fl]{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.item[b-fqotee47fl]{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.item-header[b-fqotee47fl]{
+    position: relative;
+}
+.item-body[b-fqotee47fl]{
+    flex: 1;
+}
+
+
+.info-section[b-fqotee47fl]{
+    flex: 1;
+    display: flex;
+}
+.about-section[b-fqotee47fl]{
+    flex: 1;
+    padding: 0 20px;
+}
+.price-section[b-fqotee47fl]{
+    text-align: right;
+}
+
+.summary-section[b-fqotee47fl]{
+    margin-top: 10px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number-input[b-fqotee47fl]{
+    width: 100px;
+}
+
+.clear-btn[b-fqotee47fl]{
+    font-size: 12px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.name[b-fqotee47fl]{
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-weight: bold;
+    color: var(--color-1);
+}
+
+.description[b-fqotee47fl]{
+    font-size: 14px;
+    color: var(--color-2);
+}

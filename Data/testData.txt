@@ -1,0 +1,116 @@
+{
+  "orderTime": "2024-08-04T04:50:46.474Z",
+  "address": "ho chi minh city",
+  "email": "conghau31052004@gmail.com",
+  "subTotal": 18.98,
+  "discount": 0,
+  "total": 18.98,
+  "note": "string",
+  "deliveryStatus": 0,
+  "paymentStatus": 0,
+  "isCanceled": false,
+  "orderDetails": [
+    {
+      "productName": "Chicken Burger",
+      "unitPrice": 4,
+      "quantity": 2,
+      "productId": "FFA3C5AD-BBE1-4196-B0E9-061D30A786D1"
+    },
+    {
+      "productName": "Hawaiian Pizza",
+      "unitPrice": 8,
+      "quantity": 1,
+      "productId": "C10FBD78-FF32-403F-BED9-8BE6209D7EA2"
+    },
+    {
+      "productName": "Cola",
+      "unitPrice": 1.49,
+      "quantity": 2,
+      "productId": "97C8B42D-978C-43E8-8E55-8C30C3DEFB57"
+    }
+  ]
+}
+
+
+{
+  "id": "3d1220ae-9240-4811-4c59-08dcb44266f6",
+  "orderTime": "2024-08-04T04:50:46.474",
+  "address": "ho chi minh city",
+  "email": "conghau31052004@gmail.com",
+  "subTotal": 25.96,
+  "discount": 0,
+  "total": 25.96,
+  "note": "string",
+  "deliveryStatus": 0,
+  "paymentStatus": 0,
+  "isCanceled": false,
+  "orderDetails": [
+    {
+      "id": 1,
+      "productName": "Chicken Burger",
+      "unitPrice": 4,
+      "quantity": 3,
+      "orderId": "3d1220ae-9240-4811-4c59-08dcb44266f6",
+      "productId": "ffa3c5ad-bbe1-4196-b0e9-061d30a786d1"
+    },
+    {
+      "id": 2,
+      "productName": "Hawaiian Pizza",
+      "unitPrice": 8,
+      "quantity": 1,
+      "orderId": "3d1220ae-9240-4811-4c59-08dcb44266f6",
+      "productId": "c10fbd78-ff32-403f-bed9-8be6209d7ea2"
+    },
+    {
+      "id": 3,
+      "productName": "Cola",
+      "unitPrice": 1.49,
+      "quantity": 2,
+      "orderId": "3d1220ae-9240-4811-4c59-08dcb44266f6",
+      "productId": "97c8b42d-978c-43e8-8e55-8c30c3defb57"
+    },
+    {
+      "productName": "Orange Juice",
+      "unitPrice": 1.49,
+      "quantity": 2,
+      "orderId": "3d1220ae-9240-4811-4c59-08dcb44266f6",
+      "productId": "DA58B999-4CF0-4C49-B14B-900468EDA135"
+    }
+  ],
+  "customerId": null,
+  "couponId": null
+}
+
+{
+  "orderTime": "2024-08-04T04:50:46.474Z",
+  "address": "tan phu district",
+  "email": "hauvncps35740@fpt.edu.vn",
+  "subTotal": 18.98,
+  "discount": 2,
+  "total": 16.98,
+  "note": "string",
+  "deliveryStatus": 0,
+  "paymentStatus": 0,
+  "isCanceled": false,
+  "orderDetails": [
+    {
+      "productName": "Chicken Burger",
+      "unitPrice": 4,
+      "quantity": 2,
+      "productId": "FFA3C5AD-BBE1-4196-B0E9-061D30A786D1"
+    },
+    {
+      "productName": "Hawaiian Pizza",
+      "unitPrice": 8,
+      "quantity": 1,
+      "productId": "C10FBD78-FF32-403F-BED9-8BE6209D7EA2"
+    },
+    {
+      "productName": "Cola",
+      "unitPrice": 1.49,
+      "quantity": 2,
+      "productId": "97C8B42D-978C-43E8-8E55-8C30C3DEFB57"
+    }
+  ],
+  "couponId": "8487CB0A-7792-4232-AFC9-2BD96E3ED6D0"
+}

@@ -1,0 +1,80 @@
+@page "/register"
+@using Customer.DTOs.Auth
+@using Customer.Services
+@inject AuthSVC authSVC
+@inject NotifySVC notifySVC
+
+<div class="container" style="padding-top: 50px; padding-bottom: 120px">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="border px-5 py-5 rounded-1 bg-body-tertiary">
+                <EditForm Model="@registerModel">
+                    <h3 class="text-center fw-bold text-primary">Welcome to Our System</h3>
+                    <h5 class="mb-5 text-center">Create an account to explore more</h5>
+                    <DataAnnotationsValidator />
+
+                    <div class="form-group mb-3">
+                        <label>Email address:</label>
+                        <InputText @bind-Value="registerModel!.Email" class="form-control" />
+                        <ValidationMessage For="@(() => registerModel.Email)" />
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label>Password:</label>
+                        <InputText @bind-Value="registerModel!.Password" type="password" class="form-control" />
+                        <ValidationMessage For="@(() => registerModel.Password)" />
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label>Password:</label>
+                        <InputText @bind-Value="registerModel.ConfirmPassword" type="password" class="form-control" />
+                        <ValidationMessage For="@(() => registerModel.ConfirmPassword)" />
+                    </div>
+
+                    <!-- 2 column grid layout for inline styling -->
+                    <div class="row mb-4">
+                        <div class="col">
+                            <!-- Checkbox -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                                <label class="form-check-label" for="form2Example31">I have read and accepted the 
+                                    <a href="#">terms and services</a>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="button" class="btn btn-primary btn-block mb-4 w-100 text-uppercase fw-bold rounded-1"
+                            @onclick="RegisterAsync">
+                        Create
+                    </button>
+
+                    <!-- Login buttons -->
+                    <div class="text-center">
+                        <p>Already have an account? <a href="/login">Login</a></p>
+                    </div>
+                </EditForm>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
+@code{
+    public RegisterModel? registerModel { get; set; } = new RegisterModel();
+
+    public async Task RegisterAsync()
+    {
+        var result = await authSVC.RegisterAsync(registerModel!);
+        if (result == true)
+        {
+            await notifySVC.Notify("Create accounr successfully");
+        }
+        else
+        {
+            await notifySVC.Notify("Cannot create new account! Please check your information.");
+        }
+    }
+}

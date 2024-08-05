@@ -1,0 +1,39 @@
+.banner{
+    height: 500px;
+    position: relative;
+}
+
+.home-img-container{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.home-img-container::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.475);
+}
+
+.home-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-content{
+    position: absolute;
+    z-index: 20;
+}
+
+.reason-text{
+    font-size: 14px;
+}
+
+

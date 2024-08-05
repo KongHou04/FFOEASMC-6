@@ -1,0 +1,39 @@
+.banner[b-fdoij8hva4]{
+    height: 500px;
+    position: relative;
+}
+
+.home-img-container[b-fdoij8hva4]{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.home-img-container[b-fdoij8hva4]::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.475);
+}
+
+.home-img[b-fdoij8hva4]{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-content[b-fdoij8hva4]{
+    position: absolute;
+    z-index: 20;
+}
+
+.reason-text[b-fdoij8hva4]{
+    font-size: 14px;
+}
+
+

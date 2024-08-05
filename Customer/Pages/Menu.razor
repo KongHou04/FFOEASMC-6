@@ -1,0 +1,293 @@
+@page "/menu"
+@using Customer.DTOs
+@using Customer.Services
+@inject ProductSVC productSVC
+@inject CategorySVC categorySVC
+@inject CartSVC cartSVC
+@inject ImageSVC imageSVC
+@inject NavigationManager Navigation
+
+<PageTitle>Menu</PageTitle>
+
+<div class="bg-body-tertiary border-top border-bottom">
+    <div class="container" style="padding-top: 50px; padding-bottom: 50px">
+        @* <div class="" style="margin-bottom: 25px;">
+        <h3 class="text-uppercase fw-bold">Search</h3>
+        </div> *@
+        <div class="d-flex p-3 rounded-1 border mb-4 bg-white">
+            <input type="text" class="form-control border-0 focus-none" id="exampleFormControlInput1"
+                placeholder="What dish you looking for?" @bind="KeyName">
+            <button class="btn btn-lg btn-primary px-4 rounded-1" @onclick="SearchProduct">Search</button>
+        </div>
+        <div class="row gx-4 gy-4 mb-4">
+            <div class="col-md-4">
+                <select class="form-select border rounded-1" aria-label="Category" @bind="CategoryOption">
+                    <option value="@Guid.Empty" selected>All categories</option>
+                    @if(CategoryDTOs.Count() > 0)
+                    {
+                        @foreach (var category in CategoryDTOs)
+                        {
+                            <option value="@category.Id">@category.Name</option>
+                        }
+                    }
+                </select>
+            </div>
+            <div class="col-md-4">
+                <select class="form-select border rounded-1" aria-label="Price range" @bind="PriceOption">
+                    <option value="0" selected>All price</option>
+                    @foreach (var priceOption in PriceOptions)
+                    {
+                        <option value="@priceOption.Key">@priceOption.Value</option>
+                    }
+                </select>
+            </div>
+            <div class="col-md-4">
+                <select class="form-select border rounded-1" aria-label="Default select example" @bind="TypeOption">
+                    <option value="0" selected>Open this select menu</option>
+                    @foreach (var TypeOption in TypeOptions)
+                    {
+                        <option value="@TypeOption.Key">@TypeOption.Value</option>
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="row gx-4 gy-4">
+            <div class="col-md-6">
+                <button class="btn btn-success rounded-1 w-100 text-center" @onclick="ReloadQuerry">Filt</button>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-secondary rounded-1 w-100 text-center">Clear filter</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container border-top" style="padding-top: 50px; padding-bottom: 80px;">
+    <div class="d-flex" style="margin-bottom: 55px;">
+        <h3 class="text-uppercase fw-bold">All Products</h3>
+        <select class="form-select ms-auto border rounded-1" @onchange="HandleSortOptionChange"
+            style="max-width: 250px;" aria-label="Default select example">
+            @foreach(var sortOption in SortOptions)
+            {
+                <option value="@sortOption.Key">@sortOption.Value</option>
+            }
+        </select>
+    </div>
+    <div>
+        <div class="row gy-5">
+            @foreach (var product in products)
+            {
+                <div class="col-lg-4">
+                    <div class="card overflow-hidden text-decoration-none cs-pointer">
+                        <div class="card-img position-relative">
+                            <a href="details/@product.Id">
+                                <img class="img-fit-width" style="max-height: 250px" src="@imageSVC.GetProductImg(product.Image)" alt="@product.Name">
+                            </a>
+                            <div class="position-absolute text-white"
+                                style="top: 0px; right: 0px">
+                                @if (product.HardDiscount != 0)
+                                {
+                                    <div class="bg-danger rounded-1 px-4 py-1" style="margin-top: 10px; margin-right: 10px">
+                                        @product.HardDiscount $
+                                    </div>
+                                }
+                                @if (product.PercentDiscount != 0)
+                                {
+                                    <div class="bg-warning rounded-1 px-4 py-1" style="margin-top: 10px; margin-right: 10px">
+                                        @product.PercentDiscount %
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="card-body py-4">
+                            <h4>@product.Name</h4>
+                            <div class="mt-2">@product.Description</div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="d-flex align-items-center">
+                                <div>
+                                    @{
+                                        var sellingPrice = productSVC.CaculteSellingUnitPrice(product);
+                                    }
+                                    <span style="font-size: 19px;">@sellingPrice $</span>
+                                    @if (product.UnitPrice > sellingPrice)
+                                    {
+                                        <span class="text-decoration-line-through ms-2" style="color: #959595;">@product.UnitPrice $</span>
+                                    }
+                                </div>
+                                <button class="ms-auto btn rounded-1 btn-success px-4" @onclick="async() => await cartSVC.AddToCartAsync(product.Id)">Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            
+        </div>
+    </div>
+    <div class="mt-5 d-flex justify-content-center">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+
+@code {
+    private IEnumerable<ProductDTO> products = [];
+
+    private IEnumerable<CategoryDTO> CategoryDTOs = [];
+
+    private List<KeyValuePair<int, string>> PriceOptions = new List<KeyValuePair<int, string>>()
+    {
+        new KeyValuePair<int, string>(5, "Smaller than 5"),
+        new KeyValuePair<int, string>(10, "5 to 10"),
+        new KeyValuePair<int, string>(15, "10 to 15"),
+        new KeyValuePair<int, string>(20, "15 to 20"),
+    };
+
+    private List<KeyValuePair<int, string>> TypeOptions = new List<KeyValuePair<int, string>>()
+    {
+        new KeyValuePair<int, string>(1, "Single Product"),
+        new KeyValuePair<int, string>(2, "Combo"),
+    };
+
+    private List<KeyValuePair<int, string>> SortOptions = new List<KeyValuePair<int, string>>()
+    {
+        new KeyValuePair<int, string>(0, "Name"),
+        new KeyValuePair<int, string>(1, "Price"),
+        new KeyValuePair<int, string>(3, "HardDiscount"),
+        new KeyValuePair<int, string>(4, "PercentDiscount"),
+    };
+
+    [SupplyParameterFromQuery]
+    public string KeyName { get; set; } = string.Empty;
+
+    [SupplyParameterFromQuery]
+    public Guid CategoryOption { get; set; } = Guid.Empty;
+
+    [SupplyParameterFromQuery]
+    public int PriceOption { get; set; } = 0;
+
+    [SupplyParameterFromQuery]
+    public int TypeOption { get; set; } = 0;
+
+    [SupplyParameterFromQuery]
+    public int SortOption { get; set; } = 0;
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        CategoryDTOs = await categorySVC.GetAllValidAsync() ?? [];
+        await FiltProduct();
+        SortProducts();
+    }
+
+
+    public async Task FiltProduct()
+    {
+        var result = await productSVC.GetAllValidAsync();
+        if (result == null)
+            return;
+
+        products = result == null ? [] : result;
+
+        if (KeyName != null && KeyName != string.Empty)
+            products = products.Where(p => p.Name.ToLower().Contains(KeyName.ToLower()));
+
+        if (CategoryOption != Guid.Empty)
+            products = products.Where(p => p.CategoryId == CategoryOption);
+
+        if (PriceOption != 0)
+            products = products.Where(p => 
+                productSVC.CaculteSellingUnitPrice(p) < PriceOption &&
+                productSVC.CaculteSellingUnitPrice(p) >= (PriceOption -5));
+
+        if (TypeOption == 1)
+            products = products.Where(p => p.ComboDetails.Count() == 0);
+        if (TypeOption == 2)
+            products = products.Where(p => p.ComboDetails.Count() > 0);
+    }
+
+    public void SortProducts()
+    {
+        switch (SortOption)
+        {
+            case 0:
+                {
+                    products = products.OrderBy(p => p.Name);
+                    break;
+                }
+            case 1:
+                {
+                    products = products.OrderBy(p => productSVC.CaculteSellingUnitPrice(p));
+                    break;
+                }
+            case 2:
+                {
+                    products = products.OrderBy(p => p.HardDiscount).ThenBy(p => p.PercentDiscount);
+                    break;
+                }
+            default:
+                {
+                    products = products.OrderBy(p => p.PercentDiscount).ThenBy(p => p.HardDiscount);
+                    break;
+                }
+        };
+    }
+
+    private void ReloadQuerry()
+    {
+        var queryParameters = new Dictionary<string, object>();
+        if (KeyName != null && KeyName != string.Empty)
+            queryParameters.Add(nameof(KeyName), KeyName);
+        if (CategoryOption != Guid.Empty)
+            queryParameters.Add(nameof(CategoryOption), CategoryOption);
+        if (PriceOption != 0)
+            queryParameters.Add(nameof(PriceOption), PriceOption);
+        if (TypeOption != 0)
+            queryParameters.Add(nameof(TypeOption), TypeOption);
+        if (SortOption != 0)
+            queryParameters.Add(nameof(SortOption), SortOption);
+
+        var queryString = string.Join("&", queryParameters.Select(kvp => $"{Uri.EscapeDataString(kvp.Key)}={Uri.EscapeDataString(kvp!.Value!.ToString()!)}"));
+
+        Navigation.NavigateTo($"/menu?{queryString}", true);
+    }
+
+    public void ClearFilter()
+    {
+        KeyName = string.Empty;
+        CategoryOption = Guid.Empty;
+        PriceOption = 0;
+        TypeOption = 0;
+    }
+
+    public void SearchProduct()
+    {
+        if (KeyName == null || KeyName == string.Empty)
+            return;
+        Navigation.NavigateTo($"/menu?KeyName={KeyName}", true);
+    }
+
+    public void HandleSortOptionChange(ChangeEventArgs e)
+    {
+        SortOption = Convert.ToInt16(e.Value?.ToString());
+        ReloadQuerry();
+    }
+
+
+}

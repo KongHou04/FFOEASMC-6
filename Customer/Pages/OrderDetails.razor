@@ -1,0 +1,156 @@
+﻿@page "/orderdetails/{ProductId:guid?}"
+@using Customer.DTOs
+@using Customer.Services
+@inject ProductSVC productSVC
+@inject CartSVC cartSVC
+@inject ImageSVC imageSVC
+@inject CouponSVC couponSVC
+@inject OrderSVC orderSVC
+@inject NavigationManager Navigation
+
+<div class="container" style="padding-top: 50px; padding-bottom: 50px;">
+    @if (Order == null || Order.OrderDetails == null || !Order.OrderDetails.Any())
+    {
+        <div class="my-4">
+            <h4>Enter your order id here to check it</h4>
+            <input type="text" class="form-control mb-3" @bind="ProductId"/>
+            <button class="btn btn-success" @onclick="ReloadWithProductId">Check</button>
+        </div>
+    }
+    else
+    {
+        <div class="row gx-lg-5 gy-5">
+            <div class="item-section col-lg-12">
+                <div class="bg-white">
+                    <h3 class="title fw-bold pb-4 border-bottom mb-0">Order Information</h3>
+                    <div class="item-container py-4 border-bottom">
+                        @foreach (var od in Order.OrderDetails)
+                        {
+                            <div class="item">
+                                <div class="item-header">
+                                    <img class="item-img" src="@imageSVC.GetProductImg(od.Product!.Image)" alt="" />
+                                </div>
+                                <div class="item-body">
+                                    <div class="info-section">
+                                        <div class="about-section">
+                                            <div class="name">@od.ProductName</div>
+                                            <div class="description mt-2">@od.Product?.Description</div>
+                                        </div>
+                                        <div class="price-section">
+                                            <div class="text-danger fw-bold">@od.UnitPrice</div>
+                                            <div class="text-secondary text-decoration-line-through">
+                                                @od.Product?.UnitPrice
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="summary-section">
+                                        <div class="d-flex align-items-center position-relative">
+                                            <input type="number" class="form-control form-control-sm number-input"
+                                                   name="pro-1-number" min="1" max="100" value="@od.Quantity" readonly>
+                                        </div>
+                                        <div class="ms-auto">Total: <strong>@(od.Quantity * od.UnitPrice)$</strong></div>
+                                    </div>
+                                </div>
+                                <div class="item-footer"></div>
+                            </div>
+
+                        }
+
+                    </div>
+                    <div class="total py-4">
+
+                        @if(Order.CouponId != null && Order.CouponId != Guid.Empty)
+                        {
+                            <div class="mb-3 d-flex">
+                                <input type="text" class="form-control" value="@Order.CouponId" />
+                            </div>
+                        }
+                        <div class="d-flex mb-3">
+                            <div>SubTotal:</div>
+                            <div class="ms-auto">@Order.SubTotal $</div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div>Discount:</div>
+                            <div class="ms-auto">@Order.Discount $</div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div>Total:</div>
+                            <div class="ms-auto">@Order.Total $</div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div>Delivery Status:</div>
+                            <div class="ms-auto fw-bold">@orderSVC.GetDeliveryStatus(Order.DeliveryStatus)</div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div>Payment Status:</div>
+                            <div class="ms-auto fw-bold">@orderSVC.GetPaymentStatus(Order.PaymentStatus)</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="payment-section col-lg-12">
+                <div class="bg-white">
+                    <h3 class="title pb-4 fw-bold border-bottom mb-0">Cusomter Information</h3>
+                    <div class="form py-4">
+                        <div class="form-group mb-3">
+                            <label>Email address:</label>
+                            <input type="password" value="@Order.Email" class="form-control" readonly/>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Address:</label>
+                            <input value="@Order.Address" class="form-control" readonly/>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Note:</label>
+                            <input value="@Order.Note" class="form-control" readonly />
+                        </div>
+
+                    </div>
+                    <button class="btn btn-danger btn-lg">Cancel The Order</button>
+                </div>
+            </div>
+        </div>
+
+    }
+
+</div>
+
+
+
+
+@code {
+    [Parameter]
+    public Guid? ProductId { get; set; } = null;
+
+    public OrderDTO? Order { get; set; }
+
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (ProductId != null)
+        Order = await orderSVC.GetByIdAsync(ProductId.Value);
+        if (Order == null)
+            return;
+        if(Order.OrderDetails.Count > 0)
+        {
+            foreach(var od in Order.OrderDetails)
+            {
+                var product = await productSVC.GetByIdAsync(od.ProductId!.Value);
+                if (product == null)
+                    continue;
+                od.Product = product;
+            }
+
+        }
+    }
+
+    public void ReloadWithProductId()
+    {
+        Navigation.NavigateTo($"/orderdetails/{ProductId}", true);    
+    }
+
+}

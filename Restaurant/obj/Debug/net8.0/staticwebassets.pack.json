@@ -1,0 +1,141 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\1.png",
+      "PackagePath": "staticwebassets\\products\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\10.png",
+      "PackagePath": "staticwebassets\\products\\10.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\11.png",
+      "PackagePath": "staticwebassets\\products\\11.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\12.png",
+      "PackagePath": "staticwebassets\\products\\12.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\13.png",
+      "PackagePath": "staticwebassets\\products\\13.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\14.png",
+      "PackagePath": "staticwebassets\\products\\14.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\15.png",
+      "PackagePath": "staticwebassets\\products\\15.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\16.png",
+      "PackagePath": "staticwebassets\\products\\16.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\17.png",
+      "PackagePath": "staticwebassets\\products\\17.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\18.png",
+      "PackagePath": "staticwebassets\\products\\18.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\19.png",
+      "PackagePath": "staticwebassets\\products\\19.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\2.png",
+      "PackagePath": "staticwebassets\\products\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\20.png",
+      "PackagePath": "staticwebassets\\products\\20.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\21.png",
+      "PackagePath": "staticwebassets\\products\\21.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\22.png",
+      "PackagePath": "staticwebassets\\products\\22.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\23.png",
+      "PackagePath": "staticwebassets\\products\\23.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\24.png",
+      "PackagePath": "staticwebassets\\products\\24.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\25.png",
+      "PackagePath": "staticwebassets\\products\\25.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\26.png",
+      "PackagePath": "staticwebassets\\products\\26.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\27.png",
+      "PackagePath": "staticwebassets\\products\\27.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\28.png",
+      "PackagePath": "staticwebassets\\products\\28.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\29.png",
+      "PackagePath": "staticwebassets\\products\\29.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\3.png",
+      "PackagePath": "staticwebassets\\products\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\30.png",
+      "PackagePath": "staticwebassets\\products\\30.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\4.png",
+      "PackagePath": "staticwebassets\\products\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\5.png",
+      "PackagePath": "staticwebassets\\products\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\6.png",
+      "PackagePath": "staticwebassets\\products\\6.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\7.png",
+      "PackagePath": "staticwebassets\\products\\7.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\8.png",
+      "PackagePath": "staticwebassets\\products\\8.png"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\wwwroot\\products\\9.png",
+      "PackagePath": "staticwebassets\\products\\9.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Restaurant.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Restaurant.props",
+      "PackagePath": "build\\Restaurant.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Restaurant.props",
+      "PackagePath": "buildMultiTargeting\\Restaurant.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Restaurant.props",
+      "PackagePath": "buildTransitive\\Restaurant.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

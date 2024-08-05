@@ -1,0 +1,251 @@
+/* /Layout/Footer.razor.rz.scp.css */
+.auth-information[b-4ru1hozdms]{
+    font-family: Inter,sans-serif;
+    font-size: 13px;
+    /* font-weight: bold; */
+    margin-top: 7px;
+    text-transform: uppercase;
+    /* color: #5e5e5e ; */
+    cursor: pointer;
+}
+.other-infomation[b-4ru1hozdms]{
+    font-family: Roboto,sans-serif;
+}
+.other-information-item[b-4ru1hozdms]{
+    font-size: 12px !important;
+    margin-top: 5px;
+
+}
+.title-other-information[b-4ru1hozdms]{
+    font-weight: bold;
+    font-size: 18px;
+    height: 30px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contact-img[b-4ru1hozdms]{
+    height: 33px;
+    margin-right: 15px;
+}
+
+.suport-item[b-4ru1hozdms]{
+    margin-bottom: 7px;
+}
+
+.suport-item-describe[b-4ru1hozdms]{
+    font-size: 14px;
+}
+
+.contact-form-1[b-4ru1hozdms]{
+    height: 278px
+}
+
+.more-link-item[b-4ru1hozdms]{
+    color:rgb(146, 146, 146) !important;
+    font-size: 9px;
+    cursor: pointer;
+}
+
+.footer-adv-section[b-4ru1hozdms]{
+    height: 360px
+}
+
+
+hr[b-4ru1hozdms]{
+    color: #a6a6a6;
+}
+
+@media only screen and (max-width: 576px){
+    .contact-form-1[b-4ru1hozdms]{
+        height: 258px
+    }
+}
+/* /Layout/MainLayout.razor.rz.scp.css */
+/* /Layout/NavMenu.razor.rz.scp.css */
+.search-bar[b-ytah4b9knb]::placeholder{
+    color: #989898b5;
+}
+
+/* /Pages/Cart.razor.rz.scp.css */
+.title[b-fqotee47fl]{
+    font-family: Roboto;
+    text-transform: uppercase;
+}
+
+.item-img[b-fqotee47fl]{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.item[b-fqotee47fl]{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.item-header[b-fqotee47fl]{
+    position: relative;
+}
+.item-body[b-fqotee47fl]{
+    flex: 1;
+}
+
+
+.info-section[b-fqotee47fl]{
+    flex: 1;
+    display: flex;
+}
+.about-section[b-fqotee47fl]{
+    flex: 1;
+    padding: 0 20px;
+}
+.price-section[b-fqotee47fl]{
+    text-align: right;
+}
+
+.summary-section[b-fqotee47fl]{
+    margin-top: 10px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number-input[b-fqotee47fl]{
+    width: 100px;
+}
+
+.clear-btn[b-fqotee47fl]{
+    font-size: 12px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.name[b-fqotee47fl]{
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-weight: bold;
+    color: var(--color-1);
+}
+
+.description[b-fqotee47fl]{
+    font-size: 14px;
+    color: var(--color-2);
+}
+/* /Pages/Details.razor.rz.scp.css */
+/* /Pages/Home.razor.rz.scp.css */
+.banner[b-fdoij8hva4]{
+    height: 500px;
+    position: relative;
+}
+
+.home-img-container[b-fdoij8hva4]{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.home-img-container[b-fdoij8hva4]::after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.475);
+}
+
+.home-img[b-fdoij8hva4]{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.banner-content[b-fdoij8hva4]{
+    position: absolute;
+    z-index: 20;
+}
+
+.reason-text[b-fdoij8hva4]{
+    font-size: 14px;
+}
+
+
+/* /Pages/OrderDetails.razor.rz.scp.css */
+.title[b-so8ev9nbtk]{
+    font-family: Roboto;
+    text-transform: uppercase;
+}
+
+.item-img[b-so8ev9nbtk]{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.item[b-so8ev9nbtk]{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.item-header[b-so8ev9nbtk]{
+    position: relative;
+}
+.item-body[b-so8ev9nbtk]{
+    flex: 1;
+}
+
+
+.info-section[b-so8ev9nbtk]{
+    flex: 1;
+    display: flex;
+}
+.about-section[b-so8ev9nbtk]{
+    flex: 1;
+    padding: 0 20px;
+}
+.price-section[b-so8ev9nbtk]{
+    text-align: right;
+}
+
+.summary-section[b-so8ev9nbtk]{
+    margin-top: 10px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number-input[b-so8ev9nbtk]{
+    width: 100px;
+}
+
+.clear-btn[b-so8ev9nbtk]{
+    font-size: 12px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.name[b-so8ev9nbtk]{
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-weight: bold;
+    color: var(--color-1);
+}
+
+.description[b-so8ev9nbtk]{
+    font-size: 14px;
+    color: var(--color-2);
+}

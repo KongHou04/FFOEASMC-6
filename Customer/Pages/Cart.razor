@@ -1,0 +1,244 @@
+@page "/cart"
+@using Customer.DTOs
+@using Customer.Services
+@inject ProductSVC productSVC
+@inject CartSVC cartSVC
+@inject ImageSVC imageSVC
+@inject CouponSVC couponSVC
+@inject OrderSVC orderSVC
+@inject NavigationManager Navigation
+@inject NotifySVC notifySVC
+
+<div class="container" style="padding-top: 50px; padding-bottom: 50px;">
+    @if (Order == null || Order.OrderDetails == null || !Order.OrderDetails.Any())
+    {
+        <p>Your cart is empty now. Visit our menu to take a look at our delicious dishes</p>
+        <a class="btn btn-success px-5mt-3" href="/menu">Go to Menu</a>
+    }
+    else
+    {
+        <div class="row gx-lg-5 gy-5">
+            <div class="item-section col-lg-12">
+                <div class="bg-white">
+                    <h3 class="title fw-bold pb-4 border-bottom mb-0">Cart Information</h3>
+                    <div class="item-container py-4 border-bottom">
+                        @foreach (var od in Order.OrderDetails)
+                        {
+                            <div class="item">
+                                <div class="item-header">
+                                    <img class="item-img" src="@imageSVC.GetProductImg(od.Product!.Image)" alt="" />
+                                    <button class="clear-btn bg-danger" @onclick="async() => await DeleteItemAndReloadCart(od.ProductId!.Value)">X</button>
+                                </div>
+                                <div class="item-body">
+                                    <div class="info-section">
+                                        <div class="about-section">
+                                            <div class="name">@od.ProductName</div>
+                                            <div class="description mt-2">@od.Product?.Description</div>
+                                        </div>
+                                        <div class="price-section">
+                                            <div class="text-danger fw-bold">@od.UnitPrice</div>
+                                            <div class="text-secondary text-decoration-line-through">
+                                                @od.Product?.UnitPrice
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="summary-section">
+                                        <div class="d-flex align-items-center position-relative">
+                                            <input type="number" class="form-control form-control-sm number-input"
+                                                   name="pro-1-number" min="1" max="100" value="@od.Quantity"
+                                                   @onchange="@(e => UpdateAndReloadCart(od.ProductId!.Value, e))">
+                                        </div>
+                                        <div class="ms-auto">Total: <strong>@(od.Quantity * od.UnitPrice)$</strong></div>
+                                    </div>
+                                </div>
+                                <div class="item-footer"></div>
+                            </div>
+
+                        }
+
+                    </div>
+                    <div class="total py-4">
+                        <div class="mb-3 d-flex">
+                            <input type="text" class="form-control" @bind="CouponId" />
+                            <button class="ms-3 btn btn-success px-5" @onclick="async () => await SetCouponDiscount()">Apply coupon</button>
+                        </div>
+
+                        @if (couponNotification != null)
+                        {
+                            <div class="text-success mb-3">
+                                @couponNotification
+                            </div>
+                        }
+
+                        <div class="d-flex mb-3">
+                            <div>SubTotal:</div>
+                            <div class="ms-auto">@Order.SubTotal $</div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div>Discount:</div>
+                            <div class="ms-auto">@Order.Discount $</div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <div>Total:</div>
+                            <div class="ms-auto fw-bold">@Order.Total $</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="payment-section col-lg-12">
+                <div class="bg-white">
+                    <h3 class="title pb-4 fw-bold border-bottom mb-0">Cusomter Information</h3>
+                    <EditForm Model="@Order" class="form py-4">
+
+                        <DataAnnotationsValidator />
+
+                        <div class="form-group mb-3">
+                            <label>Email address:</label>
+                            <InputText @bind-Value="Order.Email" class="form-control" />
+                            <ValidationMessage For="@(() => Order.Email)" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Address:</label>
+                            <InputTextArea @bind-Value="Order.Address" class="form-control" />
+                            <ValidationMessage For="@(() => Order.Address)" />
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <label>Note:</label>
+                            <InputTextArea @bind-Value="Order.Note" class="form-control" />
+                            <ValidationMessage For="@(() => Order.Note)" />
+                        </div>
+
+                        <div class="mt-4" style="margin-bottom: 20px;">
+                            <button class="btn btn-lg rounded-1 btn-success w-100 fw-bold" @onclick="async() => await AddOrder()">Order</button>
+                        </div>
+
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+
+    }
+    
+</div>
+
+
+
+
+@code{
+    public OrderDTO? Order { get; set; }
+
+    public ICollection<OrderDetailDTO> OrderDetails { get; set; } = [];
+
+    public Guid? CouponId { get; set; }
+
+    public string? couponNotification { get; set; } = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await ReLoadOrder();
+    }
+
+    public async Task ReLoadOrder()
+    {
+        var cart = await cartSVC.GetCartAsync();
+        List<OrderDetailDTO> orderDetails = [];
+        if (cart == null)
+            return;
+        Order = new OrderDTO();
+        foreach (var cartItem in cart)
+        {
+            var product = await productSVC.GetByIdAsync(cartItem.ProductId);
+            if (product == null)
+            {
+                await cartSVC.RemoveItemFromCart(cartItem.ProductId);
+                continue;
+            }
+            OrderDetailDTO orderDetail = new OrderDetailDTO
+            {
+                ProductId = product.Id,
+                Quantity = cartItem.Quantity,
+                ProductName = product.Name,
+                UnitPrice = productSVC.CaculteSellingUnitPrice(product)?? 0,
+                Product = product
+            };
+            Order.OrderDetails.Add(orderDetail);
+        }
+        UpdateOrderTotal();
+    }
+
+    public async Task UpdateAndReloadCart(Guid productId, ChangeEventArgs e)
+    {
+        if (int.TryParse(e.Value?.ToString(), out int quantity))
+        {
+            await cartSVC.UpdateCartItem(productId, quantity);
+            await ReLoadOrder();
+        }
+    }
+
+    public void UpdateOrderTotal()
+    {
+        if (Order != null)
+        {
+            Order.SubTotal = Order.OrderDetails.Sum(od => od.Quantity * od.UnitPrice);
+            Order.Total = Order.SubTotal - Order.Discount;
+        }
+    }
+
+    public async Task DeleteItemAndReloadCart(Guid productId)
+    {
+        await cartSVC.RemoveItemFromCart(productId);
+        await notifySVC.Notify("The item has been removed");
+        await ReLoadOrder();
+    }
+
+    public async Task SetCouponDiscount()
+    {
+        if (Order == null)
+            return;
+        if (CouponId == null || CouponId == Guid.Empty)
+        {
+            couponNotification = null;
+            return;
+        }
+        var couponType = await couponSVC.GetAvailableByCoupon(CouponId.Value);
+        if (couponType == null)
+        {
+            couponNotification = "No Coupon matches with your code";
+            Order.Discount = 0;
+            return;
+        }
+        Order.CouponId = CouponId;
+        Order.Discount = couponType.HardValue;
+        UpdateOrderTotal();
+        couponNotification = "Coupon is applied on this order";
+    }
+
+    public async Task AddOrder()
+    {
+        await notifySVC.Notify("Your order is handled right now. Wait a bit !");
+        try
+        {
+            if (Order == null)
+                return;
+            var result = await orderSVC.AddAsync(Order);
+            if (result == null)
+            {
+                Console.WriteLine("Falied");
+            }
+            else
+            {
+                Console.WriteLine("Success");
+                await cartSVC.ClearCartAsync();
+                await ReLoadOrder();
+                Navigation.NavigateTo($"/orderdetails/{result.Id}", true);
+            }
+        }
+
+        catch
+        {
+            return;
+        }
+    }
+}

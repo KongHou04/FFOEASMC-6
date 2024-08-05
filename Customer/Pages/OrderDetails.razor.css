@@ -1,0 +1,69 @@
+.title{
+    font-family: Roboto;
+    text-transform: uppercase;
+}
+
+.item-img{
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.item{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.item-header{
+    position: relative;
+}
+.item-body{
+    flex: 1;
+}
+
+
+.info-section{
+    flex: 1;
+    display: flex;
+}
+.about-section{
+    flex: 1;
+    padding: 0 20px;
+}
+.price-section{
+    text-align: right;
+}
+
+.summary-section{
+    margin-top: 10px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.number-input{
+    width: 100px;
+}
+
+.clear-btn{
+    font-size: 12px;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.name{
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-weight: bold;
+    color: var(--color-1);
+}
+
+.description{
+    font-size: 14px;
+    color: var(--color-2);
+}

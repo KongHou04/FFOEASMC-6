@@ -1,0 +1,120 @@
+﻿@using Customer.Services
+@inject CartSVC cartSVC
+@inject NavigationManager Navigation
+@inject LocalStorageSVC localStorageSVC
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+        <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand fw-bold text-success fs-2 ms-2 me-auto" href="#">FFOE</a>
+        <div class="d-none d-md-flex ms-3 me-auto" role="search">
+            <input class="form-control me-2 search-bar" name="search-bar" @bind="KeyName" type="search" placeholder="Search"
+                   aria-label="Search" @onkeydown="HandleKeyDown">
+        </div>
+
+
+        <div class="d-flex justify-content-center align-items-center d-lg-none">
+            <a class="nav-link position-relative" href="/cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <div class="text-white bg-danger position-absolute fw-bold px-1"
+                     style="font-size: 10px; left: 60%; bottom: 5px; border-radius: 10px">
+                    @cartSVC.CartItemCount
+                </div>
+            </a>
+            @if (Username == null)
+            {
+                <a class="btn border ms-5" href="/login" style="height: 40px; width: 40px; border-radius: 20px">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            }
+            else
+            {
+                <div class="d-flex justify-content-center align-items-center btn border ms-5" style="height: 40px; width: 40px; border-radius:20px">
+                    <div class="fw-bold fs-2" style="">@Username.First().ToString().ToUpper()</div>
+                </div>
+            }
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center" style="font-size: 19px;">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item ms-lg-2">
+                    <a class="nav-link" href="/menu">Menu</a>
+                </li>
+                <li class="nav-item ms-lg-2">
+                    <a class="nav-link" href="/orderdetails">Check</a>
+                </li>
+                <li class="d-none d-lg-block nav-item ms-lg-2">
+                    <a class="nav-link position-relative" href="/cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <div class="text-white bg-danger position-absolute fw-bold px-1"
+                            style="font-size: 10px; left: 60%; bottom: 5px; border-radius: 10px">
+                            @cartSVC.CartItemCount
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="d-none d-lg-block">
+            @if (Username == null)
+            {
+                <a class="btn border ms-5" href="/login" style="height: 40px; width: 40px; border-radius: 20px">
+                    <i class="fa-solid fa-user"></i>
+                </a>
+            }
+            else
+            {
+                <div class="d-flex justify-content-center align-items-center btn border ms-5" style="height: 40px; width: 40px; border-radius:20px">
+                    <div class="fw-bold fs-3" style="">@Username.First().ToString().ToUpper()</div>
+                </div>
+            }
+        </div>
+    </div>
+</nav>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    public string? KeyName { get; set; } = string.Empty;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private string? Username { get; set; }
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        cartSVC.OnChange += StateHasChanged;
+        Username = await localStorageSVC.GetItemAsync("username");
+    }
+
+    public void Dispose()
+    {
+        cartSVC.OnChange -= StateHasChanged;
+    }
+
+    private void HandleKeyDown(KeyboardEventArgs e)
+    {
+        if (e.Key == "Enter")
+        {
+            SearchProduct();
+        }
+    }
+
+    public void SearchProduct()
+    {
+        if (KeyName == null || KeyName == string.Empty)
+            return;
+        Navigation.NavigateTo($"/menu?KeyName={KeyName}", true);
+    }
+}

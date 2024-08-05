@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\customer\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|solutionrelative:customer\\pages\\register.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\customer\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|solutionrelative:customer\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\customer\\services\\authsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|solutionrelative:customer\\services\\authsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\customer\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|solutionrelative:customer\\pages\\login.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\restaurant\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\customer\\handlers\\authhttpclienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|solutionrelative:customer\\handlers\\authhttpclienthandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Register.razor",
+              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Customer\\Pages\\Register.razor",
+              "RelativeDocumentMoniker": "Customer\\Pages\\Register.razor",
+              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Customer\\Pages\\Register.razor",
+              "RelativeToolTip": "Customer\\Pages\\Register.razor",
+              "ViewState": "AQIAACIAAAAAAAAAAAAAADEAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-05T01:36:29.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Customer\\Layout\\NavMenu.razor",
+              "RelativeDocumentMoniker": "Customer\\Layout\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Customer\\Layout\\NavMenu.razor",
+              "RelativeToolTip": "Customer\\Layout\\NavMenu.razor",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAADEAAABCAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-05T01:09:48.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.razor",
+              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Customer\\Pages\\Login.razor",
+              "RelativeDocumentMoniker": "Customer\\Pages\\Login.razor",
+              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Customer\\Pages\\Login.razor",
+              "RelativeToolTip": "Customer\\Pages\\Login.razor",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAAABsAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-05T00:59:32.732Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AuthHttpClientHandler.cs",
+              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Customer\\Handlers\\AuthHttpClientHandler.cs",
+              "RelativeDocumentMoniker": "Customer\\Handlers\\AuthHttpClientHandler.cs",
+              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Customer\\Handlers\\AuthHttpClientHandler.cs",
+              "RelativeToolTip": "Customer\\Handlers\\AuthHttpClientHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T00:48:33.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Restaurant\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAAQBAAAAAAAAAAAAABYBAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-05T00:36:41.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthSVC.cs",
+              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Customer\\Services\\AuthSVC.cs",
+              "RelativeDocumentMoniker": "Customer\\Services\\AuthSVC.cs",
+              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Customer\\Services\\AuthSVC.cs",
+              "RelativeToolTip": "Customer\\Services\\AuthSVC.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAABwAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-04T23:57:34.708Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

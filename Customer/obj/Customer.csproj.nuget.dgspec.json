@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Customer\\Customer.csproj": {}
+    "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\Customer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Customer\\Customer.csproj": {
+    "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\Customer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Customer\\Customer.csproj",
+        "projectUniqueName": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\Customer.csproj",
         "projectName": "Customer",
-        "projectPath": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Customer\\Customer.csproj",
-        "packagesPath": "C:\\Users\\CONG HAU\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Customer\\obj\\",
+        "projectPath": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\Customer.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\CONG HAU\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

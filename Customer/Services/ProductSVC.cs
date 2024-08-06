@@ -52,9 +52,20 @@ namespace Customer.Services
             decimal sellingUnitPrice = (percent * product.UnitPrice) - product.HardDiscount;
             return sellingUnitPrice < 0 ? 0 : sellingUnitPrice;
         }
-    
-    
-    
-    
+
+        public async Task<IEnumerable<ProductDTO>?> GetAll()
+        {
+            try
+            {
+                var data = await httpClient.GetFromJsonAsync<IEnumerable<ProductDTO>>(apiHost);
+                return data;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+
     }
 }

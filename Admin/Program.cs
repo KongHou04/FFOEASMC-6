@@ -1,11 +1,25 @@
 using Admin.Components;
+using Customer.Handlers;
+using Customer.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+builder.Services.AddScoped<ImageSVC>();
+builder.Services.AddScoped<ProductSVC>();
+builder.Services.AddScoped<CategorySVC>();
+builder.Services.AddScoped<CartSVC>();
+builder.Services.AddScoped<CouponSVC>();
+builder.Services.AddScoped<OrderSVC>();
+builder.Services.AddScoped<NotifySVC>();
+builder.Services.AddScoped<AuthSVC>();
+builder.Services.AddScoped<LocalStorageSVC>();
+builder.Services.AddTransient<AuthHttpClientHandler>();
 
+builder.Services.AddHttpClient("AuthorizedClient")
+    .AddHttpMessageHandler<AuthHttpClientHandler>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

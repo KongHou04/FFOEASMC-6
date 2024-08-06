@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\apiTest\\apiTest.csproj": {}
+    "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\apiTest\\apiTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\apiTest\\apiTest.csproj": {
+    "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\apiTest\\apiTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\apiTest\\apiTest.csproj",
+        "projectUniqueName": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\apiTest\\apiTest.csproj",
         "projectName": "apiTest",
-        "projectPath": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\apiTest\\apiTest.csproj",
-        "packagesPath": "C:\\Users\\CONG HAU\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\apiTest\\obj\\",
+        "projectPath": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\apiTest\\apiTest.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\apiTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\CONG HAU\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Restaurant.csproj": {
-                "projectPath": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Restaurant.csproj"
+              "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Restaurant.csproj": {
+                "projectPath": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Restaurant.csproj"
               }
             }
           }
@@ -95,20 +95,20 @@
         }
       }
     },
-    "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Restaurant.csproj": {
+    "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Restaurant.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Restaurant.csproj",
+        "projectUniqueName": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Restaurant.csproj",
         "projectName": "Restaurant",
-        "projectPath": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Restaurant.csproj",
-        "packagesPath": "C:\\Users\\CONG HAU\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\obj\\",
+        "projectPath": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Restaurant.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\CONG HAU\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

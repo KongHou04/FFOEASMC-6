@@ -1,20 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{6A5973E7-98AA-4F04-B08F-9A2933E19E6A}|apiTest\\apiTest.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\apitest\\productsvctests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A5973E7-98AA-4F04-B08F-9A2933E19E6A}|apiTest\\apiTest.csproj|solutionrelative:apitest\\productsvctests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6A5973E7-98AA-4F04-B08F-9A2933E19E6A}|apiTest\\apiTest.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\apitest\\categorysvctests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A5973E7-98AA-4F04-B08F-9A2933E19E6A}|apiTest\\apiTest.csproj|solutionrelative:apitest\\categorysvctests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\restaurant\\services\\implements\\productsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\services\\implements\\productsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,49 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductSVC.cs",
-              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Services\\Implements\\ProductSVC.cs",
-              "RelativeDocumentMoniker": "Restaurant\\Services\\Implements\\ProductSVC.cs",
-              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Services\\Implements\\ProductSVC.cs",
-              "RelativeToolTip": "Restaurant\\Services\\Implements\\ProductSVC.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACkAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T09:42:00.044Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductSVCTests.cs",
-              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\apiTest\\ProductSVCTests.cs",
-              "RelativeDocumentMoniker": "apiTest\\ProductSVCTests.cs",
-              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\apiTest\\ProductSVCTests.cs",
-              "RelativeToolTip": "apiTest\\ProductSVCTests.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAAG4AAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T03:22:17.081Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CategorySVCTests.cs",
-              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\apiTest\\CategorySVCTests.cs",
-              "RelativeDocumentMoniker": "apiTest\\CategorySVCTests.cs",
-              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\apiTest\\CategorySVCTests.cs",
-              "RelativeToolTip": "apiTest\\CategorySVCTests.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T03:21:48.534Z",
-              "EditorCaption": ""
             }
           ]
         }

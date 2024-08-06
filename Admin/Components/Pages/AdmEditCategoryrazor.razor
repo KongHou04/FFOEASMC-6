@@ -1,0 +1,62 @@
+﻿@page "/editcategory/{Id:guid}"
+@* @using Customer.DTOs
+@inject NavigationManager NavigationManager
+
+<h3>Edit Category</h3>
+
+<EditForm Model="@category" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label for="Name">Name</label>
+        <InputText id="Name" class="form-control" @bind-Value="category.Name" />
+    </div>
+
+    <div class="form-group">
+        <label for="Description">Description</label>
+        <InputText id="Description" class="form-control" @bind-Value="category.Description" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+</EditForm>
+
+@code {
+    [Parameter]
+    public Guid Id { get; set; }
+
+    private Category category = new Category();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        var response = await Http.GetAsync($"categories/{Id}");
+        var apiResponse = await DeserializeResponse<Response>(response);
+
+        if (apiResponse.IsSuccess)
+        {
+            category = JsonConvert.DeserializeObject<Category>(apiResponse.Data.ToString());
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        var response = await Http.PutAsJsonAsync($"categories/{category.Id}", category);
+        var apiResponse = await DeserializeResponse<Response>(response);
+
+        if (apiResponse.IsSuccess)
+        {
+            NavigationManager.NavigateTo("/Category");
+        }
+    }
+
+    private async Task<T> DeserializeResponse<T>(HttpResponseMessage response)
+    {
+        var responseString = await response.Content.ReadAsStringAsync();
+        return JsonConvert.DeserializeObject<T>(responseString);
+    }
+} *@

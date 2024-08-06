@@ -13,59 +13,59 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = Customer
 build_property.RootNamespace = Customer
-build_property.ProjectDir = C:\Users\CONG HAU\Desktop\FastFoodOrderExpress\Customer\
+build_property.ProjectDir = D:\HocTap\C#6\Assignment\FFOEASMC-6\Customer\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\CONG HAU\Desktop\FastFoodOrderExpress\Customer
+build_property.MSBuildProjectDirectory = D:\HocTap\C#6\Assignment\FFOEASMC-6\Customer
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/CONG HAU/Desktop/FastFoodOrderExpress/Customer/App.razor]
+[D:/HocTap/C\#6/Assignment/FFOEASMC-6/Customer/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CONG HAU/Desktop/FastFoodOrderExpress/Customer/Pages/Login.razor]
+[D:/HocTap/C\#6/Assignment/FFOEASMC-6/Customer/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CONG HAU/Desktop/FastFoodOrderExpress/Customer/Pages/Menu.razor]
+[D:/HocTap/C\#6/Assignment/FFOEASMC-6/Customer/Pages/Menu.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CONG HAU/Desktop/FastFoodOrderExpress/Customer/Pages/Register.razor]
+[D:/HocTap/C\#6/Assignment/FFOEASMC-6/Customer/Pages/Register.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CONG HAU/Desktop/FastFoodOrderExpress/Customer/_Imports.razor]
+[D:/HocTap/C\#6/Assignment/FFOEASMC-6/Customer/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CONG HAU/Desktop/FastFoodOrderExpress/Customer/Layout/Footer.razor]
+[D:/HocTap/C\#6/Assignment/FFOEASMC-6/Customer/Layout/Footer.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XEZvb3Rlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-4ru1hozdms
 
-[C:/Users/CONG HAU/Desktop/FastFoodOrderExpress/Customer/Layout/MainLayout.razor]
+[D:/HocTap/C\#6/Assignment/FFOEASMC-6/Customer/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-1pt5uh0xit
 
-[C:/Users/CONG HAU/Desktop/FastFoodOrderExpress/Customer/Layout/NavMenu.razor]
+[D:/HocTap/C\#6/Assignment/FFOEASMC-6/Customer/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-ytah4b9knb
 
-[C:/Users/CONG HAU/Desktop/FastFoodOrderExpress/Customer/Pages/Cart.razor]
+[D:/HocTap/C\#6/Assignment/FFOEASMC-6/Customer/Pages/Cart.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-fqotee47fl
 
-[C:/Users/CONG HAU/Desktop/FastFoodOrderExpress/Customer/Pages/Details.razor]
+[D:/HocTap/C\#6/Assignment/FFOEASMC-6/Customer/Pages/Details.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGV0YWlscy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-odcxjzhpmb
 
-[C:/Users/CONG HAU/Desktop/FastFoodOrderExpress/Customer/Pages/Home.razor]
+[D:/HocTap/C\#6/Assignment/FFOEASMC-6/Customer/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-fdoij8hva4
 
-[C:/Users/CONG HAU/Desktop/FastFoodOrderExpress/Customer/Pages/OrderDetails.razor]
+[D:/HocTap/C\#6/Assignment/FFOEASMC-6/Customer/Pages/OrderDetails.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcT3JkZXJEZXRhaWxzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-so8ev9nbtk

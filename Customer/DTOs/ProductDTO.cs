@@ -5,7 +5,7 @@ namespace Customer.DTOs
 {
     public class ProductDTO
     {
-        public Guid Id { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
 
         [Required]
         [StringLength(100)]
@@ -23,7 +23,7 @@ namespace Customer.DTOs
         [Range(0, 1000000)]
         public decimal HardDiscount { get; set; } = 0;
 
-        [Required]
+    //    [Required]
         public string Image { get; set; } = string.Empty;
 
         [StringLength(255)]

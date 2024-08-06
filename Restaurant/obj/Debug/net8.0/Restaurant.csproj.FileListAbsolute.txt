@@ -144,3 +144,4 @@ C:\Users\CONG HAU\Desktop\FastFoodOrderExpress\Restaurant\obj\Debug\net8.0\Resta
 C:\Users\CONG HAU\Desktop\FastFoodOrderExpress\Restaurant\obj\Debug\net8.0\ref\Restaurant.dll
 C:\Users\CONG HAU\Desktop\FastFoodOrderExpress\Restaurant\bin\Debug\net8.0\Restaurant.staticwebassets.runtime.json
 C:\Users\CONG HAU\Desktop\FastFoodOrderExpress\Restaurant\bin\Debug\net8.0\QRCoder.dll
+C:\Users\CONG HAU\Desktop\FastFoodOrderExpress\Restaurant\obj\Debug\net8.0\Restaurant.sourcelink.json

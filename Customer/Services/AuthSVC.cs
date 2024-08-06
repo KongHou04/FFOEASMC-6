@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace Customer.Services
 {
-    public class AuthSVC(HttpClient httpClient)
+    public class AuthSVC(HttpClient httpClient, LocalStorageSVC localStorageSVC)
     {
         private readonly string apiHost = "https://localhost:7032/api/auth";
 
@@ -18,6 +18,11 @@ namespace Customer.Services
                 var response = await httpClient.PostAsJsonAsync(apiHost + "/access", loginModel);
                 response.EnsureSuccessStatusCode();
                 var result = await response.Content.ReadFromJsonAsync<TokenModel>();
+                if (result != null)
+                {
+                    await localStorageSVC.SetItemAsync("auth", result.Jwt!);
+                    await localStorageSVC.SetItemAsync("username", loginModel.Username);
+                } 
                 return result;
             }
             catch
@@ -50,6 +55,18 @@ namespace Customer.Services
             catch
             {
                 return null;
+            }
+        }
+
+        public async Task LogoutAsync()
+        {
+            try
+            {
+                await localStorageSVC.RemoveItemAsync("auth");
+                await localStorageSVC.RemoveItemAsync("username");
+            }
+            catch
+            {
             }
         }
     }

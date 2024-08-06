@@ -44,7 +44,7 @@ namespace Restaurant.Services.Implements
             existingProduct = productRES.GetById(id);
             existingImgFileName = existingProduct?.Image;
             var result = productRES.Delete(id);
-            if (result == true && existingImgFileName != null)
+            if (result == true && existingImgFileName != null && existingImgFileName != string.Empty)
             {
                 imgHelper.DeleteImage(existingImgFileName, ProductImgPath);
             }

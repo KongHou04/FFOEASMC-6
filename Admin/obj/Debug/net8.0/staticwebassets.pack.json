@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Admin\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Admin.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Admin.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Admin\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Admin\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Admin\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Admin\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Admin.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Admin.props",
+      "PackagePath": "build\\Admin.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Admin.props",
+      "PackagePath": "buildMultiTargeting\\Admin.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Admin.props",
+      "PackagePath": "buildTransitive\\Admin.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

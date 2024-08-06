@@ -1058,3 +1058,4 @@ C:\Users\CONG HAU\Desktop\FastFoodOrderExpress\Customer\obj\Debug\net8.0\Custome
 C:\Users\CONG HAU\Desktop\FastFoodOrderExpress\Customer\obj\Debug\net8.0\refint\Customer.dll
 C:\Users\CONG HAU\Desktop\FastFoodOrderExpress\Customer\obj\Debug\net8.0\Customer.pdb
 C:\Users\CONG HAU\Desktop\FastFoodOrderExpress\Customer\obj\Debug\net8.0\ref\Customer.dll
+C:\Users\CONG HAU\Desktop\FastFoodOrderExpress\Customer\obj\Debug\net8.0\Customer.sourcelink.json

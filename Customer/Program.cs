@@ -18,9 +18,7 @@ builder.Services.AddScoped<OrderSVC>();
 builder.Services.AddScoped<NotifySVC>();
 builder.Services.AddScoped<AuthSVC>();
 builder.Services.AddScoped<LocalStorageSVC>();
-builder.Services.AddTransient<AuthHttpClientHandler>();
 
-builder.Services.AddHttpClient("AuthorizedClient")
-    .AddHttpMessageHandler<AuthHttpClientHandler>();
+builder.Services.AddHttpClient("AuthorizedClient");
 
 await builder.Build().RunAsync();

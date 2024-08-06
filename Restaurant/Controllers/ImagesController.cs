@@ -18,7 +18,5 @@ namespace Restaurant.Controllers
             return imageUrl;
         }
 
-
-
     }
 }

@@ -1,0 +1,55 @@
+﻿@page "/createcategory"
+@using Customer.DTOs
+@inject NavigationManager NavigationManager
+@using Customer.Services
+@inject CategorySVC CategoryService
+@inject NotifySVC NotifyService
+
+<h3>Create Category</h3>
+
+<EditForm Model="@category" FormName="ct">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label>Name</label>
+        <InputText class="form-control" @bind-Value="category.Name" />
+        <ValidationMessage For="@(() => category.Name)" />
+    </div>
+
+    <div class="form-group">
+        <label>Description</label>
+        <InputText class="form-control" @bind-Value="category.Description" />
+        <ValidationMessage For="@(() => category.Description)" />
+    </div>
+
+    <div class="form-group">
+        <label>Is Available</label>
+        <InputRadioGroup @bind-Value="category.IsAvailable">
+            <InputRadio Value="true" /> Active
+            <InputRadio Value="false" /> Deactive
+        </InputRadioGroup>
+        <ValidationMessage For="@(() => category.IsAvailable)" />
+    </div>
+
+    <button class=" btn btn-primary mt-3" @onclick="async() => await CreateCategory()">Create</button>
+</EditForm>
+
+
+@code {
+    private CategoryDTO category = new CategoryDTO();
+
+    private async Task CreateCategory()
+    {
+        var response = await CategoryService.Create(category);
+        if (response != null)
+        {
+            await NotifyService.Notify("Create category successfully");
+            NavigationManager.NavigateTo("/categories");
+        }
+        else
+        {
+            await NotifyService.Notify("Create category failed");
+        }
+    }
+}

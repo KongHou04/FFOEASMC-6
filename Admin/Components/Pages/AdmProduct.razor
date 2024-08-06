@@ -1,0 +1,61 @@
+﻿@page "/products"
+@using Customer.DTOs
+@using Customer.Services
+@inject ProductSVC ProductService
+@inject ImageSVC ImageService
+
+<div>
+    <h3>Product List</h3>
+    <NavLink class="btn btn-primary" href="products/add">Create Product</NavLink>
+</div>
+
+
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Unit Price</th>
+            <th>Percent Discount</th>
+            <th>Hard Discount</th>
+            <th>Image</th>
+            <th>Is Available</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (products != null)
+        {
+            foreach (var product in products)
+            {
+                <tr>
+                    <td>@product.Name</td>
+                    <td>@product.UnitPrice</td>
+                    <td>@product.PercentDiscount</td>
+                    <td>@product.HardDiscount</td>
+                    <td>
+                        <img class="img-fit-width" style="height: 50px ; width:50px;" src="@ImageService.GetProductImg(product.Image)" alt="@product.Name">
+                    </td>
+                    <td>@product.IsAvailable</td>
+                    <td>
+                        <a class="btn btn-warning" href="editproduct/@product.Id">Edit</a> |
+                        <a class="btn btn-danger" href="deleteproduct/@product.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <h1>Loading...</h1>
+        }
+
+    </tbody>
+</table>
+
+@code {
+    private IEnumerable<ProductDTO>? products;
+
+    protected override async Task OnInitializedAsync()
+    {
+        products = await ProductService.GetAll();
+    }
+}

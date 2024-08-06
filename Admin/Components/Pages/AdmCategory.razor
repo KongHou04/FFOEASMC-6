@@ -1,0 +1,71 @@
+﻿@page "/categories"
+@rendermode InteractiveServer
+@using Customer.DTOs
+@using Customer.Services
+@inject CategorySVC CategoryService
+@inject NotifySVC NotifyService
+
+<h3>Category List</h3>
+<NavLink class="btn btn-primary" href="createcategory">Create</NavLink>
+@if (categories != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Is Available</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in categories)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td>@item.IsAvailable</td>
+                    <td>
+                        @{
+                            string linkedit = "edit/" + item.Id;
+                            <NavLink href="@linkedit" class="btn btn-warning">Edit</NavLink>
+                        }
+                        |  <button class="btn btn-danger" @onclick="async() => await Delete(item.Id)">Delete</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+} 
+else
+{
+    <p>Loading Product...</p>
+}
+
+@code {
+    public IEnumerable<CategoryDTO> categories = new List<CategoryDTO>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    public async Task LoadData()
+    {
+        categories = await CategoryService.GetAll();
+    }
+
+    public async Task Delete(Guid id)
+    {
+        var response = await CategoryService.Delete(id);
+        if (response)
+        {
+            await NotifyService.Notify("Delete category successfully");
+            await LoadData();    
+        }
+        else
+        {
+            await NotifyService.Notify("Delete category failed");
+        }
+    }
+}

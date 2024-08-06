@@ -15,7 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Admin", "Admin\Admin.csproj
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{B053EB03-B01F-4C7E-B3DD-009DA3878EBC}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiTest", "ApiTest\ApiTest.csproj", "{536CB6EF-ECC9-49CC-A603-8C4634FD6008}"
+=======
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "apiTest", "apiTest\apiTest.csproj", "{6A5973E7-98AA-4F04-B08F-9A2933E19E6A}"
+>>>>>>> a173d9c7c32d8f95cc3a7b616e2a96abc6633ba8
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

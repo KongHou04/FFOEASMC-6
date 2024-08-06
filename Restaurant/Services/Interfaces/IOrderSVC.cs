@@ -10,6 +10,8 @@ namespace Restaurant.Services.Interfaces
 
         public IEnumerable<OrderDTO> GetAllFinished();
 
+        public IEnumerable<OrderDTO> GetByCustomer(string email);
+
         public OrderDTO? GetById(Guid id);
 
         public Task<OrderDTO?> Add(OrderDTO orderDTO, string? OrderCheckUrl = null);

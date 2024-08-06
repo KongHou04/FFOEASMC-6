@@ -3,16 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6A5973E7-98AA-4F04-B08F-9A2933E19E6A}|apiTest\\apiTest.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\apitest\\productsvctests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A5973E7-98AA-4F04-B08F-9A2933E19E6A}|apiTest\\apiTest.csproj|solutionrelative:apitest\\productsvctests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\restaurant\\services\\implements\\statisticsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\services\\implements\\statisticsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6A5973E7-98AA-4F04-B08F-9A2933E19E6A}|apiTest\\apiTest.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\apitest\\categorysvctests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6A5973E7-98AA-4F04-B08F-9A2933E19E6A}|apiTest\\apiTest.csproj|solutionrelative:apitest\\categorysvctests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\restaurant\\dtos\\statistic\\orderstatistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\dtos\\statistic\\orderstatistics.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\restaurant\\services\\implements\\productsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\services\\implements\\productsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\restaurant\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\restaurant\\services\\implements\\ordersvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\services\\implements\\ordersvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\restaurant\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\restaurant\\repositories\\implements\\coupontyperes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\repositories\\implements\\coupontyperes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\restaurant\\repositories\\interfaces\\icoupontyperes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\repositories\\interfaces\\icoupontyperes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|c:\\users\\cong hau\\desktop\\fastfoodorderexpress\\restaurant\\services\\interfaces\\iordersvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\services\\interfaces\\iordersvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,45 +45,107 @@
           "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ProductSVC.cs",
-              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Services\\Implements\\ProductSVC.cs",
-              "RelativeDocumentMoniker": "Restaurant\\Services\\Implements\\ProductSVC.cs",
-              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Services\\Implements\\ProductSVC.cs",
-              "RelativeToolTip": "Restaurant\\Services\\Implements\\ProductSVC.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACkAAAAMAAAA",
+              "DocumentIndex": 1,
+              "Title": "OrderStatistics.cs",
+              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\DTOs\\Statistic\\OrderStatistics.cs",
+              "RelativeDocumentMoniker": "Restaurant\\DTOs\\Statistic\\OrderStatistics.cs",
+              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\DTOs\\Statistic\\OrderStatistics.cs",
+              "RelativeToolTip": "Restaurant\\DTOs\\Statistic\\OrderStatistics.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T09:42:00.044Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductSVCTests.cs",
-              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\apiTest\\ProductSVCTests.cs",
-              "RelativeDocumentMoniker": "apiTest\\ProductSVCTests.cs",
-              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\apiTest\\ProductSVCTests.cs",
-              "RelativeToolTip": "apiTest\\ProductSVCTests.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAAG4AAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T03:22:17.081Z",
+              "WhenOpened": "2024-08-06T15:54:06.943Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CategorySVCTests.cs",
-              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\apiTest\\CategorySVCTests.cs",
-              "RelativeDocumentMoniker": "apiTest\\CategorySVCTests.cs",
-              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\apiTest\\CategorySVCTests.cs",
-              "RelativeToolTip": "apiTest\\CategorySVCTests.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Restaurant\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAOAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T03:21:48.534Z",
+              "WhenOpened": "2024-08-06T15:17:11.108Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StatisticSVC.cs",
+              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Services\\Implements\\StatisticSVC.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Services\\Implements\\StatisticSVC.cs",
+              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Services\\Implements\\StatisticSVC.cs",
+              "RelativeToolTip": "Restaurant\\Services\\Implements\\StatisticSVC.cs",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAAAGMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T15:17:11.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderSVC.cs",
+              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Services\\Implements\\OrderSVC.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Services\\Implements\\OrderSVC.cs",
+              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Services\\Implements\\OrderSVC.cs",
+              "RelativeToolTip": "Restaurant\\Services\\Implements\\OrderSVC.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAAFMAAABfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T15:12:15.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Restaurant\\Controllers\\OrdersController.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAABwAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T15:10:24.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IOrderSVC.cs",
+              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Services\\Interfaces\\IOrderSVC.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Services\\Interfaces\\IOrderSVC.cs",
+              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Services\\Interfaces\\IOrderSVC.cs",
+              "RelativeToolTip": "Restaurant\\Services\\Interfaces\\IOrderSVC.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T15:03:25.221Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CouponTypeRES.cs",
+              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Repositories\\Implements\\CouponTypeRES.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Repositories\\Implements\\CouponTypeRES.cs",
+              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Repositories\\Implements\\CouponTypeRES.cs",
+              "RelativeToolTip": "Restaurant\\Repositories\\Implements\\CouponTypeRES.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADsAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T14:32:39.263Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ICouponTypeRES.cs",
+              "DocumentMoniker": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Repositories\\Interfaces\\ICouponTypeRES.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Repositories\\Interfaces\\ICouponTypeRES.cs",
+              "ToolTip": "C:\\Users\\CONG HAU\\Desktop\\FastFoodOrderExpress\\Restaurant\\Repositories\\Interfaces\\ICouponTypeRES.cs",
+              "RelativeToolTip": "Restaurant\\Repositories\\Interfaces\\ICouponTypeRES.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T14:32:29.288Z",
               "EditorCaption": ""
             }
           ]

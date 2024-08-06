@@ -8,9 +8,9 @@ namespace Restaurant.Repositories.Interfaces
 
         public CouponType? GetById(int id);
 
-        public CouponType? Add(CouponType CouponType);
+        public CouponType? Add(CouponType couponType);
 
-        public CouponType? Update(CouponType CouponType, int id);
+        public CouponType? Update(CouponType couponType, int id);
 
         public bool Delete(int id);
     }

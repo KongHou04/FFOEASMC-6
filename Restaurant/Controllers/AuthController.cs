@@ -1,12 +1,9 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using Restaurant.DTOs;
 using Restaurant.DTOs.Auth;
 using Restaurant.Helpers;
 using Restaurant.Models.Db;
-using Restaurant.Services.Interfaces;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net;
 using System.Security.Claims;
@@ -135,7 +132,7 @@ namespace Restaurant.Controllers
             if (user == null)
                 return BadRequest("User not found.");
 
-            var result = await userManager.ResetPasswordAsync(user, model.Token!, model.NewPassword!);
+            var result = await userManager.ResetPasswordAsync(user, model.Token, model.NewPassword);
             if (!result.Succeeded)
                 return BadRequest(result.Errors);
 

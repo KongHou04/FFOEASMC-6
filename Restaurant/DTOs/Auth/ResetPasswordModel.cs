@@ -10,15 +10,15 @@ namespace Restaurant.DTOs.Auth
 
         [Required]
         [StringLength(100)]
-        public string? NewPassword { get; set; }
+        public string NewPassword { get; set; } = string.Empty;
 
         [Required]
         [StringLength(100)]
         [Compare(nameof(NewPassword))]
-        public string? ConfirmPassword { get; set; }
+        public string ConfirmPassword { get; set; } = string.Empty;
 
         [Required]
-        public string? Token { get; set; }
+        public string Token { get; set; } = string.Empty;
 
     }
 }

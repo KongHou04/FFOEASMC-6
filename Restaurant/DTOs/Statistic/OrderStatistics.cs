@@ -11,6 +11,6 @@
         public int CompletedOrders {  get; set; }
         public decimal SumSubTotal { get; set; }
         public decimal SumDiscount { get; set; }
-        public decimal SubTotal { get; set; }
+        public decimal SumTotal { get; set; }
     }
 }

@@ -93,7 +93,7 @@ namespace Restaurant.Services.Implements
                 CompletedOrders = orders.Where(o => (o.IsCanceled = true || !(o.PaymentStatus == 1 && o.DeliveryStatus == 2 && o.IsCanceled == false))).Count(),
                 SumSubTotal = orders.Sum(o => o.SubTotal),
                 SumDiscount = orders.Sum(o => o.Discount),
-                SubTotal = orders.Sum(o => o.Total)
+                SumTotal = orders.Sum(o => o.Total)
             };
 
             return orderStats;

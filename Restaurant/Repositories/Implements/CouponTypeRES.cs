@@ -7,12 +7,12 @@ namespace Restaurant.Repositories.Implements
 {
     public class CouponTypeRES(FFOEContext context) : ICouponTypeRES
     {
-        public CouponType? Add(CouponType CouponType)
+        public CouponType? Add(CouponType couponType)
         {
             using IDbContextTransaction transaction = context.Database.BeginTransaction();
             try
             {
-                var entry = context.CouponTypes.Add(CouponType);
+                var entry = context.CouponTypes.Add(couponType);
                 var addedCouponType = entry.Entity;
                 context.SaveChanges();
                 transaction.Commit();
@@ -55,9 +55,9 @@ namespace Restaurant.Repositories.Implements
             }
         }
 
-        public CouponType? Update(CouponType CouponType, int id)
+        public CouponType? Update(CouponType couponType, int id)
         {
-            if (CouponType == null)
+            if (couponType == null)
                 return null;
             var existingCouponType = GetById(id);
             if (existingCouponType is null)
@@ -65,10 +65,10 @@ namespace Restaurant.Repositories.Implements
 
             try
             {
-                existingCouponType.HardValue = CouponType.HardValue;
-                existingCouponType.PercentValue = CouponType.PercentValue;
-                existingCouponType.StartTime = CouponType.EndTime;
-                existingCouponType.EndTime = CouponType.EndTime;
+                existingCouponType.HardValue = couponType.HardValue;
+                existingCouponType.PercentValue = couponType.PercentValue;
+                existingCouponType.StartTime = couponType.EndTime;
+                existingCouponType.EndTime = couponType.EndTime;
 
                 context.SaveChanges();
                 return existingCouponType;

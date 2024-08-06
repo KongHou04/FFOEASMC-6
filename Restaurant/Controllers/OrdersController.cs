@@ -26,6 +26,12 @@ namespace Restaurant.Controllers
             return orderSVC.GetAllFinished();
         }
 
+        [HttpGet("customer")]
+        public IEnumerable<OrderDTO> GetAllByCustomer(string email)
+        {
+            return orderSVC.GetByCustomer(email);
+        }
+
         [HttpGet("{id}")]
         public OrderDTO? GetById(Guid id)
         {

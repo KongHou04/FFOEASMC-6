@@ -81,7 +81,7 @@ namespace Restaurant.Services.Implements
         public IEnumerable<OrderDTO> GetAll()
         {
             var orders = orderRES.GetAll();
-            return mapper.Map<IEnumerable<OrderDTO>>(orders);
+            return mapper.Map<IEnumerable<OrderDTO>>(orders.OrderByDescending(o => o.OrderTime));
         }
 
         public IEnumerable<OrderDTO> GetAllFinished()
@@ -98,7 +98,7 @@ namespace Restaurant.Services.Implements
         {
             var orders = orderRES.GetAll();
             var unFinishedOrders = orders.Where(o => (o.PaymentStatus != 1 && o.DeliveryStatus != 2 && o.IsCanceled == false));
-            return mapper.Map<IEnumerable<OrderDTO>>(unFinishedOrders);
+            return mapper.Map<IEnumerable<OrderDTO>>(unFinishedOrders.OrderByDescending(o => o.OrderTime));
         }
 
         public OrderDTO? GetById(Guid id)
@@ -258,6 +258,13 @@ namespace Restaurant.Services.Implements
             PngByteQRCode qrCode = new PngByteQRCode(qrCodeData);
             byte[] qrCodeAsPngByteArr = qrCode.GetGraphic(5); // --> also read the readme
             return qrCodeAsPngByteArr;
+        }
+
+        public IEnumerable<OrderDTO> GetByCustomer(string email)
+        {
+            var orders = orderRES.GetAll();
+            var ordersByCustomer = orders.Where(o => o.Email == email);
+            return mapper.Map<IEnumerable<OrderDTO>>(ordersByCustomer.OrderByDescending(o => o.OrderTime));
         }
     }
 }

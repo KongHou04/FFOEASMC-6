@@ -6,7 +6,7 @@ namespace Restaurant.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class OrderDetailController(IOrderDetailSVC orderDetailSVC) : ControllerBase
+    public class OrderDetailsController(IOrderDetailSVC orderDetailSVC) : ControllerBase
     {
         [HttpGet("byorder/{orderId}")]
         public IEnumerable<OrderDetailDTO> GetByOrder([FromRoute] Guid orderId)

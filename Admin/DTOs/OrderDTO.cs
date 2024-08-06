@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace Customer.DTOs
+namespace Admin.DTOs
 {
     public class OrderDTO
     {

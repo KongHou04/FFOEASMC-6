@@ -1,4 +1,4 @@
-﻿namespace Customer.Services
+﻿namespace Admin.Services
 {
     public class ImageSVC
     {

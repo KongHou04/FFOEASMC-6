@@ -1,8 +1,8 @@
-﻿using Customer.DTOs;
+﻿using Admin.DTOs;
 using System.Net.Http;
 using System.Net.Http.Json;
 
-namespace Customer.Services
+namespace Admin.Services
 {
     public class OrderSVC(HttpClient httpClient)
     {

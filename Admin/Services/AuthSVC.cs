@@ -1,9 +1,9 @@
-﻿using Customer.DTOs.Auth;
+﻿using Admin.DTOs.Auth;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Reflection;
 
-namespace Customer.Services
+namespace Admin.Services
 {
     public class AuthSVC(HttpClient httpClient, LocalStorageSVC localStorageSVC)
     {

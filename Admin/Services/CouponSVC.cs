@@ -1,7 +1,7 @@
-﻿using Customer.DTOs;
+﻿using Admin.DTOs;
 using System.Net.Http.Json;
 
-namespace Customer.Services
+namespace Admin.Services
 {
     public class CouponSVC(HttpClient httpClient)
     {

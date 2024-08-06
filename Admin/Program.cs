@@ -1,6 +1,6 @@
 using Admin.Components;
 using Customer.Handlers;
-using Customer.Services;
+using Admin.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

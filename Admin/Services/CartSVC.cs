@@ -2,7 +2,7 @@
 using Microsoft.JSInterop;
 using System.Text.Json;
 
-namespace Customer.Services
+namespace Admin.Services
 {
     public class CartSVC
     {

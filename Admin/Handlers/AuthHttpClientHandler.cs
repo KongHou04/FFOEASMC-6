@@ -1,5 +1,5 @@
 ﻿using System.Net.Http.Headers;
-using Customer.Services;
+using Admin.Services;
 
 namespace Customer.Handlers
 {

@@ -1,4 +1,4 @@
-﻿namespace Customer.DTOs.Statistic
+﻿namespace Admin.DTOs.Statistic
 {
     public class CustomerStatistics
     {

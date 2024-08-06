@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Linq.Expressions;
 
-namespace Customer.DTOs
+namespace Admin.DTOs
 {
     public class ProductDTO
     {

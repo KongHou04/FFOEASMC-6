@@ -1,7 +1,7 @@
 ﻿@page "/categories"
 @rendermode InteractiveServer
-@using Customer.DTOs
-@using Customer.Services
+@using Admin.DTOs
+@using Admin.Services
 @inject CategorySVC CategoryService
 @inject NotifySVC NotifyService
 
@@ -27,7 +27,7 @@
                     <td>@item.IsAvailable</td>
                     <td>
                         @{
-                            string linkedit = "edit/" + item.Id;
+                            string linkedit = "editcategory/" + item.Id;
                             <NavLink href="@linkedit" class="btn btn-warning">Edit</NavLink>
                         }
                         |  <button class="btn btn-danger" @onclick="async() => await Delete(item.Id)">Delete</button>

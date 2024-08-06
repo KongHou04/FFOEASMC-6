@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Customer.DTOs.Auth
+namespace Admin.DTOs.Auth
 {
     public class TokenModel
     {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.JSInterop;
 using System.Globalization;
 
-namespace Customer.Services
+namespace Admin.Services
 {
     public class NotifySVC(IJSRuntime jsRuntime)
     {

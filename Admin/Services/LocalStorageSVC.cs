@@ -1,7 +1,7 @@
 ﻿using Microsoft.JSInterop;
 using System.Net.Http.Headers;
 
-namespace Customer.Services
+namespace Admin.Services
 {
     public class LocalStorageSVC
     {

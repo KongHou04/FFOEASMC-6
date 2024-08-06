@@ -1,7 +1,7 @@
-﻿using Customer.DTOs;
+﻿using Admin.DTOs;
 using System.Net.Http.Json;
 
-namespace Customer.Services
+namespace Admin.Services
 {
     public class CategorySVC(HttpClient httpClient)
     {
@@ -64,6 +64,30 @@ namespace Customer.Services
             {
                 category.Id = Guid.NewGuid();
                 var response = await httpClient.PostAsJsonAsync(apiHost, category);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return await response.Content.ReadFromJsonAsync<CategoryDTO>();
+                }
+                else
+                {
+                    Console.WriteLine($"HTTP Error: {response.StatusCode}");
+                    return null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception: {ex.Message}");
+                return null;
+            }
+        }
+
+        public async Task<CategoryDTO?> Update(CategoryDTO category)
+        {
+            try
+            {
+                var url = apiHost + $"/{category.Id}";
+                var response = await httpClient.PutAsJsonAsync(url, category);
 
                 if (response.IsSuccessStatusCode)
                 {

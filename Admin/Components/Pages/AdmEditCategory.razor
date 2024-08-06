@@ -1,0 +1,69 @@
+﻿@page "/editcategory/{Id:guid}"
+@using Admin.DTOs
+@using Admin.Services
+@rendermode InteractiveServer
+@inject CategorySVC categorySVC
+@inject NavigationManager NavigationManager
+@inject NotifySVC NotifyService
+
+@if(CategoryDTO == null)
+{
+    <h3>The Category does not exist</h3>
+}
+else
+{
+    <h3>Edit CategoryDTO</h3>
+
+    <EditForm Model="@CategoryDTO">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+            <label for="Name">Name</label>
+            <InputText id="Name" class="form-control" @bind-Value="CategoryDTO.Name" />
+        </div>
+
+        <div class="form-group">
+            <label for="Description">Description</label>
+            <InputText id="Description" class="form-control" @bind-Value="CategoryDTO.Description" />
+        </div>
+
+        <button type="button" class="btn btn-primary" @onclick="HandleValidSubmit">Update</button>
+    </EditForm>
+}
+
+
+@code {
+    [Parameter]
+    public Guid Id { get; set; }
+
+    private CategoryDTO? CategoryDTO = new CategoryDTO();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        var response = await categorySVC.GetByIdAsync(Id);
+        CategoryDTO = response ?? null;
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        if (CategoryDTO == null)
+            return;
+        var response = await categorySVC.Update(CategoryDTO);
+
+        if (response != null)
+        {
+            await NotifyService.Notify("Create category successfully");
+            NavigationManager.NavigateTo("/categories");
+        }
+        else
+        {
+            await NotifyService.Notify("Create category failed");
+        }
+    }
+}

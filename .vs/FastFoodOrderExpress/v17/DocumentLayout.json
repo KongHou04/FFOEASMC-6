@@ -1,7 +1,104 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\restaurant\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\restaurant\\controllers\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\controllers\\statisticscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\restaurant\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\restaurant\\controllers\\orderdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\controllers\\orderdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\restaurant\\controllers\\imagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\controllers\\imagescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\restaurant\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\restaurant\\controllers\\coupontypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\controllers\\coupontypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\restaurant\\controllers\\combodetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\controllers\\combodetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\restaurant\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\restaurant\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B20067B-9B14-4365-A6F7-97059D2B8ECA}|Admin\\Admin.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\admin\\components\\pages\\admaddproduct.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B20067B-9B14-4365-A6F7-97059D2B8ECA}|Admin\\Admin.csproj|solutionrelative:admin\\components\\pages\\admaddproduct.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\customer\\services\\productsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|solutionrelative:customer\\services\\productsvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\restaurant\\services\\implements\\ordersvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\services\\implements\\ordersvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\restaurant\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\restaurant\\repositories\\implements\\orderres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\repositories\\implements\\orderres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\restaurant\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\customer\\pages\\paymentreturn.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|solutionrelative:customer\\pages\\paymentreturn.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\customer\\pages\\orderdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|solutionrelative:customer\\pages\\orderdetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\customer\\services\\ordersvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|solutionrelative:customer\\services\\ordersvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B20067B-9B14-4365-A6F7-97059D2B8ECA}|Admin\\Admin.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\admin\\components\\pages\\admeditproduct.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4B20067B-9B14-4365-A6F7-97059D2B8ECA}|Admin\\Admin.csproj|solutionrelative:admin\\components\\pages\\admeditproduct.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\customer\\services\\categorysvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|solutionrelative:customer\\services\\categorysvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\restaurant\\services\\interfaces\\iordersvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\services\\interfaces\\iordersvc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\restaurant\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{060E9A86-05EC-48D8-86DA-3A5FBE1DF851}|Restaurant\\Restaurant.csproj|solutionrelative:restaurant\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|d:\\hoctap\\c#6\\assignment\\ffoeasmc-6\\customer\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2F95FB9C-9034-469B-8345-F39C688EB097}|Customer\\Customer.csproj|solutionrelative:customer\\dtos\\productdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,11 +106,323 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductsController.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\ProductsController.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Controllers\\ProductsController.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\ProductsController.cs",
+              "RelativeToolTip": "Restaurant\\Controllers\\ProductsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T01:09:12.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StatisticsController.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\StatisticsController.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Controllers\\StatisticsController.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\StatisticsController.cs",
+              "RelativeToolTip": "Restaurant\\Controllers\\StatisticsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T01:09:11.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OrderDetailsController.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\OrderDetailsController.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Controllers\\OrderDetailsController.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\OrderDetailsController.cs",
+              "RelativeToolTip": "Restaurant\\Controllers\\OrderDetailsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T01:09:07.633Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CustomersController.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\CustomersController.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Controllers\\CustomersController.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\CustomersController.cs",
+              "RelativeToolTip": "Restaurant\\Controllers\\CustomersController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T01:07:43.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CouponTypesController.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\CouponTypesController.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Controllers\\CouponTypesController.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\CouponTypesController.cs",
+              "RelativeToolTip": "Restaurant\\Controllers\\CouponTypesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T01:07:42.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ComboDetailsController.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\ComboDetailsController.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Controllers\\ComboDetailsController.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\ComboDetailsController.cs",
+              "RelativeToolTip": "Restaurant\\Controllers\\ComboDetailsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T01:07:42.008Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Controllers\\OrdersController.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Restaurant\\Controllers\\OrdersController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIMAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T22:58:23.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Controllers\\AuthController.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Restaurant\\Controllers\\AuthController.cs",
+              "ViewState": "AQIAAHYAAAAAAAAAAAAqwKYAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T23:14:49.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ImagesController.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\ImagesController.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Controllers\\ImagesController.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\ImagesController.cs",
+              "RelativeToolTip": "Restaurant\\Controllers\\ImagesController.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwA4AAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T00:37:33.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AdmAddProduct.razor",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Admin\\Components\\Pages\\AdmAddProduct.razor",
+              "RelativeDocumentMoniker": "Admin\\Components\\Pages\\AdmAddProduct.razor",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Admin\\Components\\Pages\\AdmAddProduct.razor",
+              "RelativeToolTip": "Admin\\Components\\Pages\\AdmAddProduct.razor",
+              "ViewState": "AQIAAAUAAAAAAAAAAADwvxkAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-07T00:37:59.292Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Controllers\\CategoriesController.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "Restaurant\\Controllers\\CategoriesController.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAgwDIAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-07T00:37:34.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Program.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Program.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Program.cs",
+              "RelativeToolTip": "Restaurant\\Program.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAAACwAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T23:50:42.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "OrderSVC.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Services\\Implements\\OrderSVC.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Services\\Implements\\OrderSVC.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Services\\Implements\\OrderSVC.cs",
+              "RelativeToolTip": "Restaurant\\Services\\Implements\\OrderSVC.cs",
+              "ViewState": "AQIAADIAAAAAAAAAAAAuwJkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T22:50:10.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProductSVC.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\Services\\ProductSVC.cs",
+              "RelativeDocumentMoniker": "Customer\\Services\\ProductSVC.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\Services\\ProductSVC.cs",
+              "RelativeToolTip": "Customer\\Services\\ProductSVC.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T23:03:19.642Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AdmEditProduct.razor",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Admin\\Components\\Pages\\AdmEditProduct.razor",
+              "RelativeDocumentMoniker": "Admin\\Components\\Pages\\AdmEditProduct.razor",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Admin\\Components\\Pages\\AdmEditProduct.razor",
+              "RelativeToolTip": "Admin\\Components\\Pages\\AdmEditProduct.razor",
+              "ViewState": "AQIAAGAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T22:48:05.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "OrderRES.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Repositories\\Implements\\OrderRES.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Repositories\\Implements\\OrderRES.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Repositories\\Implements\\OrderRES.cs",
+              "RelativeToolTip": "Restaurant\\Repositories\\Implements\\OrderRES.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T22:51:02.707Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "OrderDTO.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\DTOs\\OrderDTO.cs",
+              "RelativeDocumentMoniker": "Restaurant\\DTOs\\OrderDTO.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\DTOs\\OrderDTO.cs",
+              "RelativeToolTip": "Restaurant\\DTOs\\OrderDTO.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACgAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T22:55:25.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "OrderDetails.razor",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\Pages\\OrderDetails.razor",
+              "RelativeDocumentMoniker": "Customer\\Pages\\OrderDetails.razor",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\Pages\\OrderDetails.razor",
+              "RelativeToolTip": "Customer\\Pages\\OrderDetails.razor",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAAFsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T16:01:32.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "OrderSVC.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\Services\\OrderSVC.cs",
+              "RelativeDocumentMoniker": "Customer\\Services\\OrderSVC.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\Services\\OrderSVC.cs",
+              "RelativeToolTip": "Customer\\Services\\OrderSVC.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAA5wEwAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T23:01:40.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "PaymentReturn.razor",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\Pages\\PaymentReturn.razor",
+              "RelativeDocumentMoniker": "Customer\\Pages\\PaymentReturn.razor",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\Pages\\PaymentReturn.razor",
+              "RelativeToolTip": "Customer\\Pages\\PaymentReturn.razor",
+              "ViewState": "AQIAACUAAAAAAAAAAAAQwDQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T22:49:23.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "CategorySVC.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\Services\\CategorySVC.cs",
+              "RelativeDocumentMoniker": "Customer\\Services\\CategorySVC.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\Services\\CategorySVC.cs",
+              "RelativeToolTip": "Customer\\Services\\CategorySVC.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAqwDUAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T23:03:30.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IOrderSVC.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Services\\Interfaces\\IOrderSVC.cs",
+              "RelativeDocumentMoniker": "Restaurant\\Services\\Interfaces\\IOrderSVC.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\Services\\Interfaces\\IOrderSVC.cs",
+              "RelativeToolTip": "Restaurant\\Services\\Interfaces\\IOrderSVC.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAywBoAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T22:52:37.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ProductDTO.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\DTOs\\ProductDTO.cs",
+              "RelativeDocumentMoniker": "Restaurant\\DTOs\\ProductDTO.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Restaurant\\DTOs\\ProductDTO.cs",
+              "RelativeToolTip": "Restaurant\\DTOs\\ProductDTO.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAA7wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T22:55:14.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ProductDTO.cs",
+              "DocumentMoniker": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\DTOs\\ProductDTO.cs",
+              "RelativeDocumentMoniker": "Customer\\DTOs\\ProductDTO.cs",
+              "ToolTip": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\DTOs\\ProductDTO.cs",
+              "RelativeToolTip": "Customer\\DTOs\\ProductDTO.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAA5wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-06T22:55:01.348Z",
+              "EditorCaption": ""
             }
           ]
         }

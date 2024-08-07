@@ -292,3 +292,5 @@ D:\HocTap\C#6\Assignment\FFOEASMC-6\Restaurant\obj\Debug\net8.0\refint\Restauran
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Restaurant\obj\Debug\net8.0\Restaurant.pdb
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Restaurant\obj\Debug\net8.0\Restaurant.genruntimeconfig.cache
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Restaurant\obj\Debug\net8.0\ref\Restaurant.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Restaurant\bin\Debug\net8.0\Restaurant.xml
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Restaurant\obj\Debug\net8.0\Restaurant.xml

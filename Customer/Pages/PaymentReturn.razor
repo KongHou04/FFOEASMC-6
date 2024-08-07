@@ -1,0 +1,67 @@
+﻿@page "/PaymentReturn"
+@using Customer.Services
+@using Microsoft.AspNetCore.WebUtilities
+@inject NavigationManager Navigation
+@inject HttpClient Http
+@inject OrderSVC OrderService
+<div class="d-flex justify-content-center">
+    <div>
+        <h2>Payment Information</h2>
+        <NavLink class="text-primary text-decoration-underline">@Message</NavLink>
+    </div>   
+</div>
+
+
+@code {
+    private string Message { get; set; }
+    private string OrderId { get; set; }
+    private int secondsLeft = 4; // Biến đếm ngược bắt đầu từ 4 giây
+    protected override async Task OnInitializedAsync()
+    {
+        // Lấy tham số từ URL
+        var uri = new Uri(Navigation.Uri);
+        var query = QueryHelpers.ParseQuery(uri.Query);
+
+        // Lấy mã giao dịch và trạng thái từ URL
+        OrderId = query["vnp_TxnRef"];
+        var paymentResponseCode = query["vnp_ResponseCode"];
+
+        // Kiểm tra mã phản hồi
+        if (paymentResponseCode == "00") // Mã thành công của VnPay
+        {          
+            Message = "Payment Successful! Automatically redirect after 5 seconds.";
+
+            // Hiển thị thông báo và bắt đầu đếm ngược
+            for (int secondsLeft = 5; secondsLeft > 0; secondsLeft--)
+            {
+                Message = $"Payment Successful! Automatically redirect after {secondsLeft} seconds.";
+                StateHasChanged();
+                await Task.Delay(1000);
+            }  
+            try
+            {
+                bool result = await OrderService.Payment(Guid.Parse(OrderId));
+                if (result)
+                {
+                    Navigation.NavigateTo($"/orderdetails/{OrderId}", true);
+                }
+                else
+                {
+                    Message = "Payment update failed!";
+                    StateHasChanged();
+                }
+            }
+            catch (Exception ex)
+            {
+                // Ghi log lỗi hoặc thực hiện các xử lý cần thiết
+                Message = $"Payment failed with error: {ex.Message}";
+                StateHasChanged();
+            }
+        }
+        else
+        {
+            Message = "Payment failed. Please try again.";
+            StateHasChanged();
+        }
+    }
+}

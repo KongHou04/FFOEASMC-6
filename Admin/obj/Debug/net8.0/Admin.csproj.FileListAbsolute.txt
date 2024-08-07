@@ -28,6 +28,7 @@ C:\Users\CONG HAU\Desktop\FastFoodOrderExpress\Admin\obj\Debug\net8.0\refint\Adm
 C:\Users\CONG HAU\Desktop\FastFoodOrderExpress\Admin\obj\Debug\net8.0\Admin.pdb
 C:\Users\CONG HAU\Desktop\FastFoodOrderExpress\Admin\obj\Debug\net8.0\Admin.genruntimeconfig.cache
 C:\Users\CONG HAU\Desktop\FastFoodOrderExpress\Admin\obj\Debug\net8.0\ref\Admin.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Customer.staticwebassets.runtime.json
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\appsettings.Development.json
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\appsettings.json
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Admin.staticwebassets.runtime.json
@@ -36,6 +37,21 @@ D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Admin.deps.json
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Admin.runtimeconfig.json
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Admin.dll
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Admin.pdb
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.AspNetCore.Components.WebAssembly.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.JSInterop.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.JSInterop.WebAssembly.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Customer.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Customer.pdb
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\obj\Debug\net8.0\Admin.csproj.AssemblyReference.cache
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\obj\Debug\net8.0\Admin.GeneratedMSBuildEditorConfig.editorconfig
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\obj\Debug\net8.0\Admin.AssemblyInfoInputs.cache
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\obj\Debug\net8.0\Admin.AssemblyInfo.cs
@@ -53,25 +69,11 @@ D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\obj\Debug\net8.0\scopedcss\Components\
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\obj\Debug\net8.0\scopedcss\bundle\Admin.styles.css
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\obj\Debug\net8.0\scopedcss\projectbundle\Admin.bundle.scp.css
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\obj\Debug\net8.0\Admin.csproj.Up2Date
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\obj\Debug\net8.0\Admin.dll
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\obj\Debug\net8.0\refint\Admin.dll
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\obj\Debug\net8.0\Admin.pdb
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\obj\Debug\net8.0\Admin.genruntimeconfig.cache
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\obj\Debug\net8.0\ref\Admin.dll
-D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\obj\Debug\net8.0\Admin.csproj.AssemblyReference.cache
-D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Customer.staticwebassets.runtime.json
-D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
-D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
-D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Forms.dll
-D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.AspNetCore.Components.Web.dll
-D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.AspNetCore.Components.WebAssembly.dll
-D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
-D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
-D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
-D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.JSInterop.dll
-D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.JSInterop.WebAssembly.dll
-D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Customer.dll
-D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Customer.pdb
-D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\obj\Debug\net8.0\Admin.csproj.Up2Date
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.AspNetCore.WebUtilities.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Admin\bin\Debug\net8.0\Microsoft.Net.Http.Headers.dll

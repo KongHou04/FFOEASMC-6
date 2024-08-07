@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Restaurant</name>
+    </assembly>
+    <members>
+        <member name="M:Restaurant.Controllers.OrdersController.GetAll">
+             <summary>
+             Get all order current.
+             </summary>
+            <returns>
+             All orders.
+            </returns>
+        </member>
+        <member name="M:Restaurant.Controllers.OrdersController.GetAllUnFinished">
+            <summary>
+            Get all orders in ListOrder that are unfinished.
+            </summary>
+            <returns>All orders are unfinished.</returns>
+        </member>
+        <member name="M:Restaurant.Controllers.OrdersController.GetAllFinished">
+            <summary>
+            Get all orders in ListOrder that are finished.
+            </summary>
+            <returns>All orders are finished.</returns>
+        </member>
+        <member name="M:Restaurant.Controllers.OrdersController.GetById(System.Guid)">
+            <summary>
+            Get a order in ListOrder by ID
+            </summary>
+            <param name="id">Student needs create</param>
+            <returns>A student by ID</returns>
+        </member>
+        <member name="M:Restaurant.Controllers.OrdersController.Add(Restaurant.DTOs.OrderDTO,System.String)">
+            <summary>
+            Create a order into ListStudent
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST api/orders
+                {
+                   "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+                   "orderTime": "2024-08-07T00:21:15.838Z",
+                   "address": "string",
+                   "email": "user@example.com",
+                   "subTotal": 1000000,
+                   "discount": 1000000,
+                   "total": 1000000,
+                   "note": "string",
+                   "deliveryStatus": 2,
+                   "paymentStatus": 1,
+                   "isCanceled": true,
+                   "orderDetails": null
+                   "customerId": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+                   "couponId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+               }
+            </remarks>
+            <param name="orderDTO">Order needs create</param>
+            <returns>Order created</returns>
+        </member>
+        <member name="M:Restaurant.Controllers.OrdersController.Update(Restaurant.DTOs.OrderDTO,System.Guid,System.String)">
+            <summary>
+            Update a order by ID
+            </summary>
+            <param name="orderDTO">Order needs update</param>
+            <param name="id">Order ID needs update</param>
+            <returns>Order updated</returns>
+        </member>
+        <member name="M:Restaurant.Controllers.OrdersController.Delete(System.Guid)">
+            <summary>
+            Delete a order by ID
+            </summary>
+            <param name="id">Order ID needs delete</param>
+            <returns>The result of deleting is true or false.</returns>
+        </member>
+        <member name="M:Restaurant.Controllers.OrdersController.UpdateDeliveryStatus(System.Guid,System.Int32)">
+            <summary>
+            Update delivery status of a order by ID
+            </summary>
+            <param name="id">Order ID needs update.</param>
+            <param name="status">Status of the Order.</param>
+            <returns>The result of updating is true or false.</returns>
+        </member>
+        <member name="T:Restaurant.Migrations.InitFFOEContext">
+            <inheritdoc />
+        </member>
+        <member name="M:Restaurant.Migrations.InitFFOEContext.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Restaurant.Migrations.InitFFOEContext.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Restaurant.Migrations.InitFFOEContext.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Restaurant.Migrations.FFOEContext02">
+            <inheritdoc />
+        </member>
+        <member name="M:Restaurant.Migrations.FFOEContext02.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Restaurant.Migrations.FFOEContext02.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Restaurant.Migrations.FFOEContext02.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Restaurant.Migrations.FFOEContext03">
+            <inheritdoc />
+        </member>
+        <member name="M:Restaurant.Migrations.FFOEContext03.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Restaurant.Migrations.FFOEContext03.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Restaurant.Migrations.FFOEContext03.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Restaurant.Migrations.FFOEContext04">
+            <inheritdoc />
+        </member>
+        <member name="M:Restaurant.Migrations.FFOEContext04.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Restaurant.Migrations.FFOEContext04.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Restaurant.Migrations.FFOEContext04.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Restaurant.Migrations.FFOEContext05">
+            <inheritdoc />
+        </member>
+        <member name="M:Restaurant.Migrations.FFOEContext05.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Restaurant.Migrations.FFOEContext05.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Restaurant.Migrations.FFOEContext05.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>

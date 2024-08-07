@@ -1,13 +1,17 @@
 ﻿@page "/orderdetails/{ProductId:guid?}"
 @using Customer.DTOs
 @using Customer.Services
+
 @inject ProductSVC productSVC
 @inject CartSVC cartSVC
 @inject ImageSVC imageSVC
 @inject CouponSVC couponSVC
 @inject OrderSVC orderSVC
 @inject NavigationManager Navigation
+@inject VnPayService VnPayService
 
+@using System.Net.Http.Json
+@inject HttpClient _httpClient
 <div class="container" style="padding-top: 50px; padding-bottom: 50px;">
     @if (Order == null || Order.OrderDetails == null || !Order.OrderDetails.Any())
     {
@@ -83,10 +87,14 @@
                         </div>
                         <div class="d-flex mb-3">
                             <div>Payment Status:</div>
-                            <div class="ms-auto fw-bold">@orderSVC.GetPaymentStatus(Order.PaymentStatus)</div>
+                            <div class="ms-auto fw-bold text-danger">@orderSVC.GetPaymentStatus(Order.PaymentStatus)</div>
                         </div>
 
                     </div>
+                    @if(Order.PaymentStatus == 0)
+                    {
+                        <button class="btn btn-warning text-white bold" @onclick="Payment">Payment via VnPay</button>
+                    }
                 </div>
             </div>
             <div class="payment-section col-lg-12">
@@ -132,7 +140,7 @@
     protected override async Task OnInitializedAsync()
     {
         if (ProductId != null)
-        Order = await orderSVC.GetByIdAsync(ProductId.Value);
+            Order = await orderSVC.GetByIdAsync(ProductId.Value);
         if (Order == null)
             return;
         if(Order.OrderDetails.Count > 0)
@@ -153,4 +161,34 @@
         Navigation.NavigateTo($"/orderdetails/{ProductId}", true);    
     }
 
+    private async Task Payment()
+    {
+        var ipAddress = await GetIpAddressAsync();
+        var model = new VnPaymentRequestModel
+            {
+                Amount = Order.Total*100000,
+                CreatedDate = DateTime.Now,
+                OrderID = Order.Id
+            };
+        string paymentUrl = VnPayService.CreatePaymentUrl(model, ipAddress);
+        Navigation.NavigateTo(paymentUrl, true);
+    }
+
+    private async Task<string> GetIpAddressAsync()
+    {
+        try
+        {
+            var response = await _httpClient.GetFromJsonAsync<IpInfo>("https://api.ipify.org?format=json");
+            return response?.Ip ?? "127.0.0.1";
+        }
+        catch
+        {
+            return "127.0.0.1";
+        }
+    }
+
+    private class IpInfo
+    {
+        public string Ip { get; set; }
+    }
 }

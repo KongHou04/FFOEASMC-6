@@ -22,6 +22,11 @@ namespace Restaurant.Controllers
         UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, 
         RoleManager<IdentityRole> roleManager) : ControllerBase
     {
+        /// <summary>
+        /// Register a customer into system
+        /// </summary>
+        /// <param name="model">Information User needs register.</param>
+        /// <returns>The result of register.</returns>
         [HttpPost("register/customer")]
         public async Task<IActionResult> RegisterAsCustomer([FromBody] RegisterModel model)
         {
@@ -56,7 +61,12 @@ namespace Restaurant.Controllers
 
             return Ok();
         }
-
+        /// <summary>
+        /// Register a staff or admin into system
+        /// </summary>
+        /// <param name="model">Information User needs register.</param>
+        /// <param name="isAdminUser">Role user needs register.</param>
+        /// <returns>The result of register.</returns>
         [HttpPost("register/staff/{isAdminUser}")]
         public async Task<IActionResult> RegisterAsStaff([FromBody] RegisterModel model, [FromRoute] bool isAdminUser = false)
         {
@@ -92,7 +102,12 @@ namespace Restaurant.Controllers
 
             return Ok();
         }
-
+        /// <summary>
+        /// Sending mail when you forget your password.
+        /// </summary>
+        /// <param name="email">The email user needs a retoring password.</param>
+        /// <param name="resetPasswordClientUiUrl">...</param>
+        /// <returns>The result of register.</returns>
         [HttpPost("forgotpassword")]
         public async Task<IActionResult> ForgotPassword([FromRoute] string email, [FromQuery] string resetPasswordClientUiUrl)
         {
@@ -124,7 +139,11 @@ namespace Restaurant.Controllers
                 return BadRequest("Cannot send link to your email");
             }
         }
-
+        /// <summary>
+        /// Confirmation update password
+        /// </summary>
+        /// <param name="model">Model reset password.</param>
+        /// <returns>The result of register.</returns>
         [HttpPost("resetpassword")]
         public async Task<IActionResult> ResetPassword([FromBody] ResetPasswordModel model)
         {
@@ -141,7 +160,11 @@ namespace Restaurant.Controllers
 
             return Ok("Password has been reset successfully.");
         }
-
+        /// <summary>
+        /// Generate new token
+        /// </summary>
+        /// <param name="loginModel">Information user to login</param>
+        /// <returns>A new access token.</returns>
         [HttpPost("access")]
         public async Task<IActionResult> GetAccessToken([FromBody] LoginModel loginModel)
         {
@@ -178,7 +201,11 @@ namespace Restaurant.Controllers
                 RefreshToken = refreshToken
             });
         }
-
+        /// <summary>
+        /// Refresh token has expired
+        /// </summary>
+        /// <param name="tokenModel">Information token has expried.</param>
+        /// <returns>A new token.</returns>
         [HttpPost("refresh")]
         public async Task<IActionResult> RefreshJwt([FromBody] TokenModel tokenModel)
         {
@@ -269,7 +296,10 @@ namespace Restaurant.Controllers
 
             return principal;
         }
-
+        /// <summary>
+        /// Get email user via HttpContext
+        /// </summary>
+        /// <returns>Email User current.</returns>
         [HttpGet("email")]
         public async Task<string?> GetEmail()
         {

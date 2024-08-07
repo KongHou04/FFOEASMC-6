@@ -23,5 +23,8 @@ namespace Restaurant.Services.Interfaces
         public Task<bool> CancelOrder(Guid id);
 
         public bool Delete(Guid id);
+
+        public Task<bool> Payment(Guid id);
+
     }
 }

@@ -259,5 +259,29 @@ namespace Restaurant.Services.Implements
             byte[] qrCodeAsPngByteArr = qrCode.GetGraphic(5); // --> also read the readme
             return qrCodeAsPngByteArr;
         }
+        public async Task<bool> Payment(Guid id)
+        {
+            var order = orderRES.GetById(id);
+            if (order == null)
+                return false;
+            if (order.PaymentStatus == 1)
+                return false;
+            order.PaymentStatus = 1;
+            var updatedOrder = orderRES.Update(order, order.Id);
+            if (updatedOrder == null)
+                return false;
+            if (updatedOrder.Email != null)
+            {
+                var subject = "Order Payment Notice";
+                var body = $@"
+                <h1>Your order has been paid.</h1>
+                <p>We regret to inform you that your order with ID {updatedOrder.Id} has been paid.</p>
+                <p>If you have any questions or concerns, please contact our support team.</p>
+                <p>Thanks for your order.</p>";
+
+                await emailSender.SendEmailAsync(updatedOrder.Email, subject, body);
+            }
+            return true;
+        }
     }
 }

@@ -65,5 +65,17 @@ namespace Customer.Services
                 return "Unpaid";
             return "Paid";
         }
+        public async Task<bool> Payment(Guid id)
+        {
+            try
+            {
+                var response = await httpClient.PutAsync(apiHost + "/payment/" + id,null);
+                return response.IsSuccessStatusCode;
+            }
+            catch
+            {
+                return false;
+            }
+        }
     }
 }

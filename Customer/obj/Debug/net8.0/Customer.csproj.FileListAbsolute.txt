@@ -2120,3 +2120,13 @@ D:\HocTap\C#6\Assignment\FFOEASMC-6\Customer\obj\Debug\net8.0\Customer.dll
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Customer\obj\Debug\net8.0\refint\Customer.dll
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Customer\obj\Debug\net8.0\Customer.pdb
 D:\HocTap\C#6\Assignment\FFOEASMC-6\Customer\obj\Debug\net8.0\ref\Customer.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Customer\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.wasm
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Customer\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Net.Http.Headers.wasm
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Customer\bin\Debug\net8.0\wwwroot\_framework\Microsoft.AspNetCore.WebUtilities.wasm.gz
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Customer\bin\Debug\net8.0\wwwroot\_framework\Microsoft.Net.Http.Headers.wasm.gz
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Customer\bin\Debug\net8.0\Microsoft.AspNetCore.WebUtilities.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Customer\bin\Debug\net8.0\Microsoft.Net.Http.Headers.dll
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Customer\obj\Debug\net8.0\webcil\Microsoft.AspNetCore.WebUtilities.wasm
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Customer\obj\Debug\net8.0\webcil\Microsoft.Net.Http.Headers.wasm
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Customer\obj\Debug\net8.0\compressed\gizac2h8y1.gz
+D:\HocTap\C#6\Assignment\FFOEASMC-6\Customer\obj\Debug\net8.0\compressed\i2wmnfufat.gz

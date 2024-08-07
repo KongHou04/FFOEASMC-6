@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2qy0mES/m/uWGt51lRPXwZv/oBXOW+0FVKwvMCwc7r0=",
+  "Hash": "xLkpqzuiN1B0ciTdxwc28wveNyWxgGbgxlZxSm4zklo=",
   "Source": "Customer",
   "BasePath": "/",
   "Mode": "Root",
@@ -376,6 +376,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\obj\\Debug\\net8.0\\webcil\\Microsoft.AspNetCore.Metadata.wasm"
+    },
+    {
+      "Identity": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm",
+      "SourceId": "Customer",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.WebUtilities.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\obj\\Debug\\net8.0\\webcil\\Microsoft.AspNetCore.WebUtilities.wasm"
     },
     {
       "Identity": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.CSharp.wasm",
@@ -775,6 +794,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\obj\\Debug\\net8.0\\webcil\\Microsoft.JSInterop.WebAssembly.wasm"
+    },
+    {
+      "Identity": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm",
+      "SourceId": "Customer",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Net.Http.Headers.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\obj\\Debug\\net8.0\\webcil\\Microsoft.Net.Http.Headers.wasm"
     },
     {
       "Identity": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.VisualBasic.Core.wasm",
@@ -5926,6 +5964,25 @@
       "OriginalItemSpec": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Extensions.Diagnostics.wasm"
     },
     {
+      "Identity": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\obj\\Debug\\net8.0\\compressed\\gizac2h8y1.gz",
+      "SourceId": "Customer",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.WebUtilities.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.wasm"
+    },
+    {
       "Identity": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\obj\\Debug\\net8.0\\compressed\\gsfomjkp3p.gz",
       "SourceId": "Customer",
       "SourceType": "Computed",
@@ -6038,6 +6095,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\bin\\Debug\\net8.0\\wwwroot\\_framework\\WindowsBase.wasm"
+    },
+    {
+      "Identity": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\obj\\Debug\\net8.0\\compressed\\i2wmnfufat.gz",
+      "SourceId": "Customer",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Net.Http.Headers.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Net.Http.Headers.wasm"
     },
     {
       "Identity": "D:\\HocTap\\C#6\\Assignment\\FFOEASMC-6\\Customer\\obj\\Debug\\net8.0\\compressed\\igprqcdkr3.gz",

@@ -90,6 +90,18 @@
           }
         }
       },
+      "Microsoft.AspNetCore.WebUtilities/8.0.7": {
+        "dependencies": {
+          "Microsoft.Net.Http.Headers": "8.0.7",
+          "System.IO.Pipelines": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.WebUtilities.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.724.31402"
+          }
+        }
+      },
       "Microsoft.Extensions.Configuration/8.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
@@ -239,6 +251,17 @@
           }
         }
       },
+      "Microsoft.Net.Http.Headers/8.0.7": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Net.Http.Headers.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.724.31402"
+          }
+        }
+      },
       "System.Diagnostics.DiagnosticSource/8.0.0": {},
       "System.IO.Pipelines/8.0.0": {},
       "System.Text.Encodings.Web/8.0.0": {},
@@ -250,6 +273,7 @@
       "Customer/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Components.WebAssembly": "8.0.7",
+          "Microsoft.AspNetCore.WebUtilities": "8.0.7",
           "Microsoft.Extensions.Http": "8.0.0"
         },
         "runtime": {
@@ -312,6 +336,13 @@
       "sha512": "sha512-CD5PNOSnOh3XcqZaaxp0uENK4WTFifSkhWkuO9dQ/Mo7gpXwAMvrfwdqW2T7Z4YS+VXuka7Gf70f29HND9oQ3w==",
       "path": "microsoft.aspnetcore.metadata/8.0.7",
       "hashPath": "microsoft.aspnetcore.metadata.8.0.7.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.WebUtilities/8.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-p4v+nBlHc8vnZep8T1cvchPYZBG+pKEJv2pt8sNXoOIcLOjYhJP7vOSzvBugio0AYdVsy8fJDmTZtj6wo5vOhQ==",
+      "path": "microsoft.aspnetcore.webutilities/8.0.7",
+      "hashPath": "microsoft.aspnetcore.webutilities.8.0.7.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/8.0.0": {
       "type": "package",
@@ -452,6 +483,13 @@
       "sha512": "sha512-v4WCFuCvGo0ZnMJXGHunD/FJ31zrGKiSS9Q6d0R4a5FCKx9U2n+foHXJFR+RLaTz7g1wKloIx2UXQg02Mmz/mA==",
       "path": "microsoft.jsinterop.webassembly/8.0.7",
       "hashPath": "microsoft.jsinterop.webassembly.8.0.7.nupkg.sha512"
+    },
+    "Microsoft.Net.Http.Headers/8.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-etS+BY2/fIMqdnoUFiQ1xXMVwaBHUwdbpTj+cWWKyJwDbuxIy2KmBTgWkeIXJy8wrlg/vfqRZ7CfdSppu1EaWw==",
+      "path": "microsoft.net.http.headers/8.0.7",
+      "hashPath": "microsoft.net.http.headers.8.0.7.nupkg.sha512"
     },
     "System.Diagnostics.DiagnosticSource/8.0.0": {
       "type": "package",

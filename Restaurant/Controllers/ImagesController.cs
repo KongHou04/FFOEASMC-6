@@ -9,6 +9,10 @@ namespace Restaurant.Controllers
     {
         string ProductImgPath = configuration["FolderPath:Product"]!;
 
+        /// <summary>
+        /// get image of a product.
+        /// </summary>
+        /// <returns>The url of the image.</returns>
         [HttpGet("products")]
         public string GetFullProductImgPath()
         {

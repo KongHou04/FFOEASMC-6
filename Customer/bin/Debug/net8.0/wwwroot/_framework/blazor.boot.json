@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Customer",
   "resources": {
-    "hash": "sha256-g55My9M7xoDxTI/XV5cxQi2AqbhmmmQYn0QI8UWREIo=",
+    "hash": "sha256-E6y7kzOoZraJStfv4etq5VGWoatqjdN6W7MLNKujWSg=",
     "jsModuleNative": {
       "dotnet.native.8.0.7.kzuwijk3e2.js": "sha256-tFsxPBbhkdn6GKNBKvCRLzrfAHdyM86odYTe0MtrwMk="
     },
@@ -23,6 +23,7 @@
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-xUXkW7JRXPVjIOKez4b8snSiAM4j0j94by1z9OMW2UA=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-gbP3w8Fy8u6E/VxRmH65xv70D88hF37gvIe3dsVTE4k=",
       "Microsoft.AspNetCore.Metadata.wasm": "sha256-H+Or4mx9ew+622c40gHkM70UI+dPHz2Hpa4CGjtF1RA=",
+      "Microsoft.AspNetCore.WebUtilities.wasm": "sha256-wpnPtWZx97ljgEhrA46ijpuTYo0gbiy+qahq5UlQouo=",
       "Microsoft.Extensions.Configuration.wasm": "sha256-UDGEQR7J3WTfzYMgOzxVIBwFQtKEeJvO8UgrWagypdE=",
       "Microsoft.Extensions.Configuration.Abstractions.wasm": "sha256-yNdqbqDWGiJo943D7LPak5xryCBEsNH0wtdiuU1R9VE=",
       "Microsoft.Extensions.Configuration.Binder.wasm": "sha256-fNNlyyW44y8Gp6dvOtsvHoVNzpT8lrKmPleg5CDhRAo=",
@@ -43,6 +44,7 @@
       "Microsoft.Extensions.Primitives.wasm": "sha256-pVrYOTfjb2ITls3LKIByW1t8jwOAWFhmkIVDewtJ1GE=",
       "Microsoft.JSInterop.wasm": "sha256-ujAR3ldYmTi++VGM1Np5SMOEC+mP4m6Uva9Sgj54ZVs=",
       "Microsoft.JSInterop.WebAssembly.wasm": "sha256-gxsImbLQUP0+xBtL1HjJHY4TK2kv0b55tv61C2OHsUU=",
+      "Microsoft.Net.Http.Headers.wasm": "sha256-E/OBg0STRKh0hZ+S27S9GXgOVLhnxsZg8rc51rwCtTw=",
       "System.IO.Pipelines.wasm": "sha256-JqVBy6SV+3qk+IK3VJiyIDt9CsVk6b1/ytTXmrI4mTM=",
       "Microsoft.CSharp.wasm": "sha256-vCw0CqN4rcydAU24ZGZXUBVaczRh4WYncFAUMHp2p5E=",
       "Microsoft.VisualBasic.Core.wasm": "sha256-UInDqxTqt933Jzd6mPpf48KtlIyJR71xZS4CGFI4TNY=",
@@ -212,10 +214,10 @@
       "mscorlib.wasm": "sha256-fLbZiSHBNdpHoh4EgRqMaNP5NQyIK5TEj6AXFLqo8m8=",
       "netstandard.wasm": "sha256-d4xbAE8qrKq5euUoZHPO+jkYPjlCYBzUew45MKsYKic=",
       "System.Private.CoreLib.wasm": "sha256-8yi6NcX1lkNQgV4WKjnMBYIZyKh4P+OXnXVQmgxGZD4=",
-      "Customer.wasm": "sha256-Tfz24ZITAecl9409cnHI3EISoFEYIBY3vt8qVXfG4Z4="
+      "Customer.wasm": "sha256-v76HlJebBthpnZZgcL7wExrdAJUIgGVueD9WDfsIVD8="
     },
     "pdb": {
-      "Customer.pdb": "sha256-yO5Azm/zyIoVqNjMSBA7ESLgcx56LGeRV4V15P7z9f8="
+      "Customer.pdb": "sha256-+9SPd7WP7f57/rhNN/rUcGHfUHg+7VjHFoJ3OqBgjx4="
     }
   },
   "cacheBootResources": true,

@@ -1,0 +1,74 @@
+﻿@page "orderbycustomer/{email:guid}"
+@using Customer.DTOs
+@using Customer.Services
+@inject ProductSVC productSVC
+@inject CartSVC cartSVC
+@inject ImageSVC imageSVC
+@inject CouponSVC couponSVC
+@inject OrderSVC orderSVC
+@inject NavigationManager Navigation
+
+<div class="container">
+    <h3>orderbycustomer</h3>
+    @if (categories != null)
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in categories)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Description</td>
+                        <td>
+                            @if (item.IsAvailable)
+                            {
+                                <div class="bg-success mt-2" style="height:7px; width: 7px; border-radius: 50%"></div>
+                            }
+                            else
+                            {
+                                <div class="bg-danger mt-2" style="height:7px; width: 7px; border-radius: 50%"></div>
+                            }
+                        </td>
+
+                        <td>
+                            @{
+                                string linkedit = "editcategory/" + item.Id;
+                                <NavLink href="@linkedit" class="btn btn-warning">Edit</NavLink>
+                            }
+                            |  <button class="btn btn-danger" @onclick="async() => await Delete(item.Id)">Delete</button>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>Loading Product...</p>
+    }
+</div>
+
+
+@code {
+    IEnumerable<OrderDTO> orders { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    public async Task LoadData()
+    {
+        categories = await CategoryService.GetAll() ?? [];
+    }
+
+
+}

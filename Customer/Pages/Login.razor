@@ -3,6 +3,7 @@
 @using Customer.Services
 @inject AuthSVC authSVC
 @inject LocalStorageSVC localStorageSVC
+@inject NavigationManager Navigation
 
 <div class="container" style="padding-top: 50px; padding-bottom: 120px">
     <div class="row">
@@ -90,6 +91,7 @@
         {
             await localStorageSVC.SetItemAsync("authToken", tokenModel.Jwt!);
             await localStorageSVC.SetItemAsync("username", loginModel.Username);
+            Navigation.NavigateTo("/", true);
         }
     }
 }

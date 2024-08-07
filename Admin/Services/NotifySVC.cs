@@ -7,7 +7,16 @@ namespace Admin.Services
     {
         public async Task Notify(string msg)
         {
-            await jsRuntime.InvokeVoidAsync("showNotification", msg);
+            try
+            {
+                await jsRuntime.InvokeVoidAsync("showNotification", msg);
+
+            }
+            catch
+            {
+                Console.Write("Cannot send notification");
+                return;
+            }
         }
     }
 }

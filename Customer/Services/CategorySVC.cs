@@ -46,41 +46,5 @@ namespace Customer.Services
                 return null;
             }
         }
-        public async Task<bool> Delete(Guid id)
-        {
-            try
-            {
-                bool data = await httpClient.DeleteFromJsonAsync<bool>(apiHost+"/"+id);
-                return data;
-            }
-            catch
-            {
-                return false;
-            }
-        }
-        public async Task<CategoryDTO?> Create(CategoryDTO category)
-        {
-            try
-            {
-                category.Id = Guid.NewGuid();
-                var response = await httpClient.PostAsJsonAsync(apiHost, category);
-
-                if (response.IsSuccessStatusCode)
-                {
-                    return await response.Content.ReadFromJsonAsync<CategoryDTO>();
-                }
-                else
-                {
-                    Console.WriteLine($"HTTP Error: {response.StatusCode}");
-                    return null;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Exception: {ex.Message}");
-                return null;
-            }
-        }
-
     }
 }

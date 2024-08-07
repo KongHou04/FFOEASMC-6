@@ -1,6 +1,7 @@
 ﻿@page "/products/add"
 @using Admin.DTOs
 @using Admin.Services
+@rendermode InteractiveServer
 @inject ProductSVC ProductService
 @inject CategorySVC CategoryService
 @inject NavigationManager NavigationManager
@@ -95,21 +96,44 @@
         </div>
     </div>
 
+    <div>
+        <label>Image:</label>
+        <InputFile OnChange="HandleFileSelected" />
+    </div>
+
     <button type="submit" class="btn btn-success">Create</button>
 </EditForm>
 
 
 @code {
     private ProductDTO product = new ProductDTO();
-    private IEnumerable<CategoryDTO> categories;
+    private IEnumerable<CategoryDTO> categories = [];
+    private IBrowserFile? selectedFile;
 
     protected override async Task OnInitializedAsync()
     {
-        categories = await CategoryService.GetAllValidAsync();
+        categories = await CategoryService.GetAllValidAsync()?? [];
     }
 
     private async Task CreateProduct()
     {
-        await NotifyService.Notify("Create");
+        if (selectedFile != null)
+        {
+            var result = await ProductService.AddProductAsync(product, selectedFile);
+            if (result)
+            {
+                await NotifyService.Notify("Add new product successfully");
+                NavigationManager.NavigateTo("/products", true);
+            }
+            else
+            {
+                await NotifyService.Notify("Cannot add new product");
+            }
+        }
+    }
+
+    private void HandleFileSelected(InputFileChangeEventArgs e)
+    {
+        selectedFile = e.File;
     }
 }

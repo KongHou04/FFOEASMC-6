@@ -7,6 +7,7 @@
 
 <h3>Category List</h3>
 <NavLink class="btn btn-primary" href="createcategory">Create</NavLink>
+<button class="ms-3 btn btn-primary" @onclick="async () => await LoadData()">Reload</button>
 @if (categories != null)
 {
     <table class="table">
@@ -14,7 +15,7 @@
             <tr>
                 <th>Name</th>
                 <th>Description</th>
-                <th>Is Available</th>
+                <th>Status</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -24,7 +25,17 @@
                 <tr>
                     <td>@item.Name</td>
                     <td>@item.Description</td>
-                    <td>@item.IsAvailable</td>
+                    <td>
+                        @if (item.IsAvailable)
+                        {
+                            <div class="bg-success mt-2" style="height:7px; width: 7px; border-radius: 50%"></div>
+                        }
+                        else
+                        {
+                            <div class="bg-danger mt-2" style="height:7px; width: 7px; border-radius: 50%"></div>
+                        }
+                    </td>
+
                     <td>
                         @{
                             string linkedit = "editcategory/" + item.Id;
@@ -52,7 +63,7 @@ else
 
     public async Task LoadData()
     {
-        categories = await CategoryService.GetAll();
+        categories = await CategoryService.GetAll()?? [];
     }
 
     public async Task Delete(Guid id)

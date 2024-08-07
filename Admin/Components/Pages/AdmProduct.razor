@@ -1,8 +1,10 @@
 ﻿@page "/products"
 @using Admin.DTOs
 @using Admin.Services
+@rendermode InteractiveServer
 @inject ProductSVC ProductService
 @inject ImageSVC ImageService
+@inject NotifySVC NotifySVC
 
 <div>
     <h3>Product List</h3>
@@ -38,7 +40,7 @@
                     <td>@product.IsAvailable</td>
                     <td>
                         <a class="btn btn-warning" href="editproduct/@product.Id">Edit</a> |
-                        <a class="btn btn-danger" href="deleteproduct/@product.Id">Delete</a>
+                        <button class="btn btn-danger" href="deleteproduct/@product.Id" @onclick="async() => await DeleteAsync(product.Id)">Delete</button>
                     </td>
                 </tr>
             }
@@ -56,6 +58,26 @@
 
     protected override async Task OnInitializedAsync()
     {
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
         products = await ProductService.GetAll();
+
+    }
+
+    private async Task DeleteAsync(Guid id)
+    {
+        var result = await ProductService.DeleteProductAsync(id);
+        if (result)
+        {
+            await NotifySVC.Notify("Delete product successfully");
+            await LoadData();
+        }
+        else
+        {
+            await NotifySVC.Notify("Cannot delete product");
+        }
     }
 }

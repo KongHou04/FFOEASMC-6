@@ -12,23 +12,36 @@
 }
 else
 {
-    <h3>Edit CategoryDTO</h3>
+    <h3>Edit Category</h3>
 
     <EditForm Model="@CategoryDTO">
         <DataAnnotationsValidator />
         <ValidationSummary />
 
-        <div class="form-group">
-            <label for="Name">Name</label>
-            <InputText id="Name" class="form-control" @bind-Value="CategoryDTO.Name" />
+        <div class="form-group mb-3">
+            <label>Name</label>
+            <InputText class="form-control" @bind-Value="CategoryDTO.Name" />
+            <ValidationMessage For="@(() => CategoryDTO.Name)" />
         </div>
 
-        <div class="form-group">
-            <label for="Description">Description</label>
-            <InputText id="Description" class="form-control" @bind-Value="CategoryDTO.Description" />
+        <div class="form-group mb-3">
+            <label>Description</label>
+            <InputText class="form-control" @bind-Value="CategoryDTO.Description" />
+            <ValidationMessage For="@(() => CategoryDTO.Description)" />
         </div>
 
-        <button type="button" class="btn btn-primary" @onclick="HandleValidSubmit">Update</button>
+        <div class="form-group mb-3">
+            <label>Is Available</label>
+            <div>
+                <InputRadioGroup @bind-Value="CategoryDTO.IsAvailable">
+                    <InputRadio Value="true" /> Active
+                    <InputRadio Value="false" /> Deactive
+                </InputRadioGroup>
+            </div>
+            <ValidationMessage For="@(() => CategoryDTO.IsAvailable)" />
+        </div>
+
+        <button class=" btn btn-primary mt-3" @onclick="async() => await HandleValidSubmit()">Edit</button>
     </EditForm>
 }
 
@@ -58,7 +71,7 @@ else
 
         if (response != null)
         {
-            await NotifyService.Notify("Create category successfully");
+            await NotifyService.Notify("Update category successfully");
             NavigationManager.NavigateTo("/categories");
         }
         else

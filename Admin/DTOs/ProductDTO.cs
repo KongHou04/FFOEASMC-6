@@ -32,6 +32,8 @@ namespace Admin.DTOs
         [Required]
         public bool IsAvailable { get; set; } = true;
 
+        public IFormFile? ImgFile { get; set; }
+
 
         #region Relationship config
         public Guid CategoryId { get; set; }

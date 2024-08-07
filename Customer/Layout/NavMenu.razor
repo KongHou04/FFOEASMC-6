@@ -2,6 +2,8 @@
 @inject CartSVC cartSVC
 @inject NavigationManager Navigation
 @inject LocalStorageSVC localStorageSVC
+@inject NotifySVC notifySVC
+@inject AuthSVC authSVC
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
@@ -61,7 +63,7 @@
             </ul>
         </div>
 
-        <div class="d-none d-lg-block">
+        <div class="d-none d-lg-block position-relative">
             @if (Username == null)
             {
                 <a class="btn border ms-5" href="/login" style="height: 40px; width: 40px; border-radius: 20px">
@@ -70,9 +72,17 @@
             }
             else
             {
-                <div class="d-flex justify-content-center align-items-center btn border ms-5" style="height: 40px; width: 40px; border-radius:20px">
-                    <div class="fw-bold fs-3" style="">@Username.First().ToString().ToUpper()</div>
-                </div>
+                <button id="user-icon" @onclick="ShowOrHideUserFunc"
+                    class="d-flex justify-content-center align-items-center btn border ms-5 position-relative" 
+                    style="height: 40px; width: 40px; border-radius:20px">
+                    <div class="fs-4 fw-bold">@Username.First().ToString().ToUpper()</div>
+                </button>
+                <ul class="@displayClass user-options position-absolute" 
+                    style="top: 60px; right: 0px; list-style-type: none; z-index: 100; padding-inline-start: 0; width: 120px">
+                    <li><a href="#">Account Info</a></li>
+                    <li><a href="#">Order history</a></li>
+                    <li><button class="btn p-0" @onclick="async() => await LogoutAsync()">Logout</button></li>
+                </ul>
             }
         </div>
     </div>
@@ -87,6 +97,8 @@
 
     private string? Username { get; set; }
 
+    private string displayClass = "d-none";
+
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
@@ -94,8 +106,17 @@
 
     protected override async Task OnInitializedAsync()
     {
+        displayClass = "d-none";
         cartSVC.OnChange += StateHasChanged;
         Username = await localStorageSVC.GetItemAsync("username");
+    }
+
+    private void ShowOrHideUserFunc()
+    {
+        if (displayClass == "d-none")
+            displayClass = "d-block";
+        else
+            displayClass = "d-none";
     }
 
     public void Dispose()
@@ -116,5 +137,12 @@
         if (KeyName == null || KeyName == string.Empty)
             return;
         Navigation.NavigateTo($"/menu?KeyName={KeyName}", true);
+    }
+
+    private async Task LogoutAsync()
+    {
+        await authSVC.LogoutAsync();
+        await notifySVC.Notify("Logout successfully");
+        Navigation.NavigateTo($"/", true);
     }
 }

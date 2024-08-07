@@ -1,5 +1,152 @@
-﻿<h3>AdmEditProduct</h3>
+﻿@page "/editproduct/{ProductId:guid}"
+@rendermode InteractiveServer
+@using Admin.DTOs
+@using Admin.Services
+@inject ProductSVC ProductService
+@inject NavigationManager Navigation
+@inject NavigationManager NavigationManager
+@inject ImageSVC ImageService
+@inject NotifySVC NotifyService
+
+
+<h3>Edit Product</h3>
+
+@if (product == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <EditForm Model="@product">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="form-group">
+            <label for="name">Name</label>
+            <InputText id="name" class="form-control" @bind-Value="product.Name" />
+            <ValidationMessage For="@(() => product.Name)" />
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <InputTextArea id="description" class="form-control" @bind-Value="product.Description" />
+        </div>
+        <div class="form-group">
+            <label for="unitPrice">Unit Price</label>
+            <InputNumber id="unitPrice" class="form-control" @bind-Value="product.UnitPrice" />
+            <ValidationMessage For="@(() => product.UnitPrice)" />
+        </div>
+        <div class="form-group">
+            <label for="percentDiscount">Percent Discount</label>
+            <InputNumber id="percentDiscount" class="form-control" @bind-Value="product.PercentDiscount" />
+            <ValidationMessage For="@(() => product.PercentDiscount)" />
+        </div>
+        <div class="form-group">
+            <label for="hardDiscount">Hard Discount</label>
+            <InputNumber id="hardDiscount" class="form-control" @bind-Value="product.HardDiscount" />
+            <ValidationMessage For="@(() => product.HardDiscount)" />
+        </div>
+        <div class="form-group mt-3">
+            <label for="imageurl">Change Image:</label>
+        </div>
+        <div class="form-group">
+            <label>Image</label>
+            @if(imgUrl != string.Empty)
+            {
+                <img src="@imgUrl" alt="Product Image" style="max-width: 200px; max-height: 200px; display: block; margin-top: 10px;" />
+            }
+            else
+            {
+                @if (!string.IsNullOrEmpty(product.Image))
+                {
+                    <img src="@ImageService.GetProductImg(product.Image)" alt="Product Image" style="max-width: 200px; max-height: 200px; display: block; margin-top: 10px;" />
+                }
+                else
+                {
+                    <p>No image available</p>
+                }
+            }
+            
+        </div>
+
+        <div>
+            <label>Image:</label>
+            <InputFile OnChange="HandleFileSelected" />
+        </div>
+
+        <div class="form-group">
+            <label for="isAvailable">Is Available</label>
+            <InputCheckbox id="isAvailable" @bind-Value="product.IsAvailable" />
+        </div>
+        <button type="button" class="btn btn-primary" @onclick="HandleValidSubmit">Save</button>
+        <button type="button" class="btn btn-secondary" @onclick="Cancel">Cancel</button>
+    </EditForm>
+}
 
 @code {
+    [Parameter]
+    public Guid ProductId { get; set; }
 
+    private IBrowserFile? selectedFile { get; set; }
+
+    private ProductDTO? product;
+
+    private string imgUrl = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        product = await ProductService.GetByIdAsync(ProductId);
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        if (product == null)
+            return;
+        var result = await ProductService.UpdateProductAsync(product, selectedFile);
+        if (result)
+        {
+            await NotifyService.Notify("Update new product successfully");
+            NavigationManager.NavigateTo("/products", true);
+        }
+        else
+        {
+            await NotifyService.Notify("Cannot Update the product");
+        }
+    }
+    private void AssignImage(string url)
+    {
+        if (product == null)
+            return;
+        product.Image = url;
+    }
+
+    private void Cancel()
+    {
+        Navigation.NavigateTo("/products");
+    }
+
+    private async Task HandleFileSelected(InputFileChangeEventArgs e)
+    {
+        selectedFile = e.File;
+        var file = (IBrowserFile)e.File;
+        if (file == null)
+        {
+            imgUrl = string.Empty;
+            return;
+        }
+        var fileBytes = await GetFileBytesAsync(file);
+        imgUrl = $"data:{file.ContentType};base64,{Convert.ToBase64String(fileBytes)}";
+    }
+
+    private async Task<byte[]> GetFileBytesAsync(IBrowserFile file)
+    {
+        using (var stream = file.OpenReadStream(maxAllowedSize: 1024*1024*5))
+        {
+            using (var memoryStream = new MemoryStream())
+            {
+                await stream.CopyToAsync(memoryStream);
+                return memoryStream.ToArray();
+            }
+        }
+    }
 }
+

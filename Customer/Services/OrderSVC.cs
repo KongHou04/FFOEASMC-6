@@ -4,7 +4,7 @@ using System.Net.Http.Json;
 
 namespace Customer.Services
 {
-    public class OrderSVC(HttpClient httpClient)
+    public class OrderSVC(HttpClient httpClient, LocalStorageSVC localStorageSVC)
     {
         private readonly string apiHost = "https://localhost:7032/api/orders";
 
@@ -64,6 +64,17 @@ namespace Customer.Services
             if (statusNumber == 0)
                 return "Unpaid";
             return "Paid";
+        }
+
+        public async Task<IEnumerable<OrderDetailDTO>?> GetAllByCustomer()
+        {
+            var email = await localStorageSVC.GetItemAsync("username");
+            if (email == null)
+                return null;
+            try
+            {
+
+            }
         }
     }
 }

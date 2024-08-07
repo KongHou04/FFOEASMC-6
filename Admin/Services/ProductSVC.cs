@@ -1,10 +1,15 @@
 ﻿using Admin.DTOs;
+using Microsoft.AspNetCore.Components.Forms;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
+using System.IO;
+using System.Net.Http.Headers;
 
 namespace Admin.Services
 {
     public class ProductSVC
     {
         private readonly HttpClient _httpClient;
+        private readonly int maxFileSize = 1024 * 1024 * 5;
         private readonly string apiHost = "https://localhost:7032/api/products";
 
         public ProductSVC(HttpClient httpClient)
@@ -71,27 +76,79 @@ namespace Admin.Services
             }
         }
 
-        public async Task<bool> AddProductAsync(ProductDTO product)
+        public async Task<bool> AddProductAsync(ProductDTO product, IBrowserFile? selectedFile)
         {
+            using var content = new MultipartFormDataContent();
+            if (selectedFile != null)
+            {
+                byte[] bytes;
+                var stream = selectedFile.OpenReadStream(maxAllowedSize: maxFileSize);
+                using (var memoryStream = new MemoryStream())
+                {
+                    await stream.CopyToAsync(memoryStream);
+                    bytes  = memoryStream.ToArray();
+                }
+                content.Add(new StreamContent(new MemoryStream(bytes)), "ImgFile", selectedFile.Name);
+            }
+            content.Add(new StringContent(product.Name), "Name");
+            content.Add(new StringContent(product.UnitPrice.ToString()), "UnitPrice");
+            content.Add(new StringContent(product.PercentDiscount.ToString()), "PercentDiscount");
+            content.Add(new StringContent(product.HardDiscount.ToString()), "HardDiscount");
+            content.Add(new StringContent(product.IsAvailable.ToString()), "IsAvailable");
+            content.Add(new StringContent(product.CategoryId.ToString()), "CategoryId");
+
+            content.Add(new StringContent("conghau"), "msg");
             try
             {
-                var response = await _httpClient.PostAsJsonAsync(apiHost, product);
+                var response = await _httpClient.PostAsync(apiHost, content);
+                if (!response.IsSuccessStatusCode)
+                {
+                    var errorContent = await response.Content.ReadAsStringAsync();
+                    var msg = $"Error: {response.StatusCode}, Details: {errorContent}";
+                    return false;
+                }
                 return response.IsSuccessStatusCode;
             }
-            catch
+            catch (Exception ex)
             {
                 return false;
             }
         }
 
-        public async Task<bool> UpdateProductAsync(Guid id, ProductDTO product)
+        public async Task<bool> UpdateProductAsync(ProductDTO product, IBrowserFile? selectedFile)
         {
+            using var content = new MultipartFormDataContent();
+            if (selectedFile != null)
+            {
+                byte[] bytes;
+                var stream = selectedFile.OpenReadStream(maxAllowedSize: maxFileSize);
+                using (var memoryStream = new MemoryStream())
+                {
+                    await stream.CopyToAsync(memoryStream);
+                    bytes = memoryStream.ToArray();
+                }
+                content.Add(new StreamContent(new MemoryStream(bytes)), "ImgFile", selectedFile.Name);
+            }
+            content.Add(new StringContent(product.Name), "Name");
+            content.Add(new StringContent(product.UnitPrice.ToString()), "UnitPrice");
+            content.Add(new StringContent(product.PercentDiscount.ToString()), "PercentDiscount");
+            content.Add(new StringContent(product.HardDiscount.ToString()), "HardDiscount");
+            content.Add(new StringContent(product.IsAvailable.ToString()), "IsAvailable");
+            content.Add(new StringContent(product.CategoryId.ToString()), "CategoryId");
+
+            content.Add(new StringContent("conghau"), "msg");
             try
             {
-                var response = await _httpClient.PutAsJsonAsync($"{apiHost}/{id}", product);
+                var response = await _httpClient.PutAsync(apiHost+$"/{product.Id}", content);
+                if (!response.IsSuccessStatusCode)
+                {
+                    var errorContent = await response.Content.ReadAsStringAsync();
+                    var msg = $"Error: {response.StatusCode}, Details: {errorContent}";
+                    return false;
+                }
                 return response.IsSuccessStatusCode;
             }
-            catch
+            catch (Exception ex)
             {
                 return false;
             }

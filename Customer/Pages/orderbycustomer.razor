@@ -1,49 +1,33 @@
-﻿@page "orderbycustomer/{email:guid}"
+﻿@page "/orderbycustomer"
+
 @using Customer.DTOs
 @using Customer.Services
-@inject ProductSVC productSVC
-@inject CartSVC cartSVC
-@inject ImageSVC imageSVC
-@inject CouponSVC couponSVC
 @inject OrderSVC orderSVC
-@inject NavigationManager Navigation
 
 <div class="container">
     <h3>orderbycustomer</h3>
-    @if (categories != null)
+    @if (orders != null)
     {
         <table class="table">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Description</th>
-                    <th>Status</th>
-                    <th>Action</th>
+                    <th>Id</th>
+                    <th>Total</th>
+                    <th>Payment Status</th>
+                    <th>Delivery Status</th>
+                    <th>Actions</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach (var item in categories)
+                @foreach (var item in orders)
                 {
                     <tr>
-                        <td>@item.Name</td>
-                        <td>@item.Description</td>
+                        <td>@item.Id</td>
+                        <td>@item.Total</td>
+                        <td>@orderSVC.GetPaymentStatus(item.PaymentStatus)</td>
+                        <td>@orderSVC.GetDeliveryStatus(item.DeliveryStatus)</td>
                         <td>
-                            @if (item.IsAvailable)
-                            {
-                                <div class="bg-success mt-2" style="height:7px; width: 7px; border-radius: 50%"></div>
-                            }
-                            else
-                            {
-                                <div class="bg-danger mt-2" style="height:7px; width: 7px; border-radius: 50%"></div>
-                            }
-                        </td>
-
-                        <td>
-                            @{
-                                string linkedit = "editcategory/" + item.Id;
-                                <NavLink href="@linkedit" class="btn btn-warning">Edit</NavLink>
-                            }
-                            |  <button class="btn btn-danger" @onclick="async() => await Delete(item.Id)">Delete</button>
+                            <a class="btn btn-warning" href="orderdetails/@item.Id">Edit</a> |
                         </td>
                     </tr>
                 }
@@ -67,7 +51,7 @@
 
     public async Task LoadData()
     {
-        categories = await CategoryService.GetAll() ?? [];
+        orders = await orderSVC.GetAllByCustomer();
     }
 
 

@@ -66,14 +66,19 @@ namespace Customer.Services
             return "Paid";
         }
 
-        public async Task<IEnumerable<OrderDetailDTO>?> GetAllByCustomer()
+        public async Task<IEnumerable<OrderDTO>?> GetAllByCustomer()
         {
             var email = await localStorageSVC.GetItemAsync("username");
             if (email == null)
                 return null;
             try
             {
-
+                var data = await httpClient.GetFromJsonAsync<IEnumerable<OrderDTO>>(apiHost+"/customer" + $"/{email}");
+                return data;
+            }
+            catch
+            {
+                return null;
             }
         }
     }

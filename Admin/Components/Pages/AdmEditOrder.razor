@@ -1,0 +1,108 @@
+﻿@page "/editorder/{OrderId:guid}"
+@using Admin.DTOs
+@using Admin.Services
+@inject OrderSVC orderSVC
+
+<h3>Cập Nhật Đơn Hàng</h3>
+
+@code {
+    [Parameter]
+    public Guid OrderId { get; set; }
+
+    private OrderDTO order;
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (OrderId != Guid.Empty)
+        {
+            order = await orderSVC.GetByIdAsync(OrderId);
+            isLoading = false;
+        }
+    }
+
+    private async Task UpdateOrderStatus()
+    {
+        if (order != null)
+        {
+            // Chuyển đổi giá trị từ radio buttons thành số nguyên
+            int paymentStatus = order.PaymentStatus; 
+            int deliveryStatus = order.DeliveryStatus;
+
+            var updateSuccess = await orderSVC.UpdateFullStatus(OrderId, paymentStatus, deliveryStatus);
+
+            if (updateSuccess)
+            {
+                Console.WriteLine("Cập nhật thành công!");
+            }
+            else
+            {
+                Console.WriteLine("Cập nhật thất bại.");
+            }
+        }
+    }
+
+
+
+
+}
+
+@if (isLoading)
+{
+    <p>Đang tải dữ liệu...</p>
+}
+else if (order == null)
+{
+    <p>Không tìm thấy đơn hàng.</p>
+}
+else
+{
+    <EditForm Model="@order" OnValidSubmit="UpdateOrderStatus">
+        <DataAnnotationsValidator />
+        <ValidationSummary />
+
+        <div class="mb-3">
+            <label for="orderTime" class="form-label">Thời Gian</label>
+            <input type="text" class="form-control" id="orderTime" value="@order.OrderTime.ToString("yyyy-MM-dd HH:mm:ss")" disabled />
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Trạng Thái Thanh Toán</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="paid" name="paymentStatus" value="1"
+                       checked="@order.PaymentStatus == " Paid"" />
+                <label class="form-check-label" for="paid">
+                    Đã Thanh Toán
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="unpaid" name="paymentStatus" value="0"
+                       checked="@order.PaymentStatus == " Unpaid"" />
+                <label class="form-check-label" for="unpaid">
+                    Chưa Thanh Toán
+                </label>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Trạng Thái Giao Hàng</label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="delivered" name="deliveryStatus" value="1"
+                       checked="@order.DeliveryStatus == " Delivered"" />
+                <label class="form-check-label" for="delivered">
+                    Đã Giao
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" id="notDelivered" name="deliveryStatus" value="0"
+                       checked="@order.DeliveryStatus == " In Queue"" />
+                <label class="form-check-label" for="notDelivered">
+                    Chưa Giao
+                </label>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Cập Nhật</button>
+    </EditForm>
+
+}

@@ -1,0 +1,73 @@
+﻿@page "/orders"
+@using Admin.DTOs
+@using Admin.Services
+@inject OrderSVC orderSVC
+
+<h3>Danh sách Đơn Hàng</h3>
+
+@code {
+    private IEnumerable<OrderDTO> orders;
+    private bool isModalOpen = false;
+    private Guid selectedOrderId;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        orders = await orderSVC.GetAllOrder();
+    }
+
+
+}
+
+
+@if (orders == null || !orders.Any())
+{
+    <p>Không có đơn hàng nào.</p>
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID </th>
+                <th>Thời Gian</th>
+                <th>Địa Chỉ</th>
+                <th>Email</th>
+                <th>Tổng Phụ</th>
+                <th>Giảm Giá</th>
+                <th>Tổng</th>
+                <th> Giao Hàng</th>
+                <th>Thanh Toán</th>
+                <th>Hủy</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in orders)
+            {
+                <tr>
+                    <td>@order.Id</td>
+                    <td>@order.OrderTime.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                    <td>@order.Address</td>
+                    <td>@order.Email</td>
+                    <td>@order.SubTotal</td>
+                    <td>@order.Discount</td>
+                    <td>@order.Total</td>
+                    <td>@order.DeliveryStatus</td>
+                    <td class="">@order.PaymentStatus</td>
+                    <td>@order.IsCanceled</td>
+                    <td>
+                        <a class="btn btn-primary" href="editorder/@order.Id">
+                            Cập nhật
+                        </a>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
